@@ -1,0 +1,47 @@
+<div class="container">
+  <!-- <table class="table table-hover table-striped">
+      <thead class="thead-light">
+          <tr>
+              <th scope="col" width="4%">#</th>
+              <th scope="col">File Name</th>
+              <th scope="col" width="14%">Owner</th>
+              <th scope="col" width="14%">Auth</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let file of files | searchBox: keyword">
+              <th scope="row">{{file.id}}</th>
+              <td><a [routerLink]="['/files/detail',file.id]">{{file.name}}</a></td>
+              <td>{{file.owner}}</td>
+              <td>{{file.auth}}</td>
+          </tr>
+      </tbody>
+  </table> -->
+  <div class="row">
+    <div class="event_card col-lg-4 ml-lg-0 mr-lg-4 col-md-5 mx-md-auto my-4 col-sm-10" *ngFor="let event of events">
+      <a [routerLink]="['/events/detail',event.id]">
+        <div class="img-thumbnail">
+          <img class="event_card_img img-fluid" src="https://cdn-images-1.medium.com/max/1200/1*V3Kfghg_jIV0ubxmAnCXBA.jpeg" />
+          <div class="caption event_card_info col-12">
+            <h5 class="mt-2">{{event.name}}</h5>
+            <dl>
+              <dd>time: {{event.time}}</dd>
+              <dd>time: {{event.time}}</dd>
+            </dl>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="/w3images/lights.jpg">
+        <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+        <div class="caption">
+          <p>Lorem ipsum...</p>
+        </div>
+      </a>
+    </div>
+  </div> -->
+</div>
