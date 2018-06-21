@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Event } from '../../type/event';
 
 @Component({
-  selector: 'app-events-display',
-  templateUrl: './events-display.component.html',
-  styleUrls: ['./events-display.component.css']
+  selector: 'app-events-detail',
+  templateUrl: './events-detail.component.html',
+  styleUrls: ['./events-detail.component.css']
 })
-export class EventsDisplayComponent implements OnInit {
+export class EventsDetailComponent implements OnInit {
 
-  // scrollDistance: number = 0;
-  // throttle: number = 200;
+  constructor(
+    private route: ActivatedRoute
+  ) { }
+
+  event: Event;
 
   events: Event[] = [
     {
@@ -37,26 +41,12 @@ export class EventsDisplayComponent implements OnInit {
         owner: "user No.1"
       }
   ];
-  events2: Event[] = [
-    {
-      id:1,
-      name: "123",
-      time: "12:00",
-      description: "1st event",
-      location: "test loc",
-      owner: "user No.1"
-      }
-  ];
-
-  constructor() { }
-
+  
   ngOnInit() {
-  }
-
-  onScroll() {
-    console.log('down');
-
-    this.events=this.events.concat(this.events2);
+    this.route.params.subscribe(params =>{
+      console.log(params);
+      this.event = this.events[+params["id"]-1];
+    });
   }
 
 }
