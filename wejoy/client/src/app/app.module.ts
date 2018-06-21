@@ -9,9 +9,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { EventsDisplayComponent } from './components/events-display/events-display.component';
 import { EventsDetailComponent } from './components/events-detail/events-detail.component';
 
-import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-// import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,8 +19,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
   ],
   imports: [
     BrowserModule,
-    routing,
-    InfiniteScrollModule
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

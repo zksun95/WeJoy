@@ -1,9 +1,5 @@
 <div class="container">
-  <div class="row" 
-      infiniteScroll
-      [infiniteScrollDistance]="-0.4"
-      [infiniteScrollThrottle]="500"
-      (scrolled)="onScroll()" >
+  <div class="row" >
     <div class="event_card col-lg-4 col-md-5 mx-md-auto my-4 col-sm-10" 
         *ngFor="let event of events">
       <a [routerLink]="['/events/detail',event.id]">
@@ -19,5 +15,8 @@
         </div>
       </a>
     </div>
+  </div>
+  <div class="row" *ngIf="loading">
+    <h3 class="mx-auto">Loading ...</h3>
   </div>
 </div>
