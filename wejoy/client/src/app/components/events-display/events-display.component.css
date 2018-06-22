@@ -20,3 +20,70 @@ a.event_card_main:link:active, a:visited:active {
 a.event_card_main:hover {
     text-decoration: none;
 }
+
+.card-title{
+    height: 3em;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+
+/* .text-overflow{
+    font-size: 120%;
+    height: 5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+/* .text-overflow {
+    -webkit-line-clamp: 2;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  } */
+
+/* styles for '...' */ 
+.text-overflow {
+    font-size: 120%;
+    /* hide text if it more than N lines  */
+    overflow: hidden;
+    /* for set '...' in absolute position */
+    position: relative; 
+    /* use this value to count block height */
+    /* line-height: 1.2em; */
+    /* max-height = line-height (1.2) * lines max number (3) */
+    max-height: 3em; 
+    /* fix problem when last visible word doesn't adjoin right side  */
+    text-align: justify;  
+    /* place for '...' */
+    margin-right: -1em;
+    padding-right: 1em;
+  }
+  /* create the ... */
+  .text-overflow:before {
+    /* points in the end */
+    content: '...';
+    /* absolute position */
+    position: absolute;
+    /* set position to right bottom corner of block */
+    right: 1.1em;
+    bottom: 0;
+    background: white;
+  }
+  /* hide ... if we have text, which is less than or equal to max lines */
+  .text-overflow:after {
+    /* points in the end */
+    content: '';
+    /* absolute position */
+    position: absolute;
+    /* set position to right bottom corner of text */
+    right: 1.1em;
+    /* set width and height */
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    /* bg color = bg color under block */
+    background: white;
+  }

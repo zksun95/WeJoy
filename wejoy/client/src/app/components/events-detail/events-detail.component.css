@@ -2,3 +2,29 @@
     position:absolute;
     bottom:0;
 }
+
+.evetn-card{
+    max-width: 1080px;
+    /* width: minmax(max-content, 300px) minmax(200px, 1fr) 150px; */
+}
+
+/* @media (max-width: @screen-xs) {
+    body{font-size: 10px;}
+}
+
+@media (max-width: @screen-sm) {
+    body{font-size: 14px;}
+} */
+
+.flex-font-size{
+    /* font-size: 2vmin; */
+    font-size: 80%;
+}
+
+pre {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}

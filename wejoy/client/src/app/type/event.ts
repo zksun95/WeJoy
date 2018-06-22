@@ -5,4 +5,5 @@ export class Event{
     location: string;
     time: string;
     owner: string;
+    imageUrl: string
 }

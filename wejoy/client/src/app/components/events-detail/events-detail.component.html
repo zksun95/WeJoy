@@ -1,37 +1,41 @@
 <!-- <div class="container" *ngIf="event"> -->
-<div class="col-lg-10 col-md-12 mx-auto" *ngIf="event">
+<div class="mx-auto" *ngIf="event">
+  <div class="evetn-card mx-auto">
 
-  <div class="row col-md-12 col-lg-11 mx-auto border-right border-top p-0 mx-0 mb-0 mt-lg-5 mt-md-2">
-    <div class="col-md-8 col-sm-12 event-detail-img p-0 m-0">
-      <img class="card-img-left img-fluid" src="https://cdn-images-1.medium.com/max/1200/1*V3Kfghg_jIV0ubxmAnCXBA.jpeg" >
+    <!-- pic and info on the side of pic, info will disable when screen too small -->
+    <div class="row border-right border-top p-0 mx-2 mb-0 mt-lg-5 mt-md-2">
+      <div class="col-md-8 col-sm-12 event-detail-img p-0 m-0">
+        <img class="card-img-left img-fluid" src="{{event.imageUrl}}" >
+      </div>
+      <div class="col-md-4 col-sm-12 event-detail-info d-none d-md-block">
+        <blockquote class="ml-3 mt-4 blockquote text-left">
+          <p class="mb-lg-4 mb-md-3 flex-font-size"><b>Free</b></p>
+          <p class="mb-1 flex-font-size">{{event.name}}</p>
+          <footer class="small blockquote-footer">by {{event.owner}}</footer>
+        </blockquote>
+        <blockquote class="event-detail-timeloc mx-3 blockquote text-left">
+          <p class="mb-lg-1 mb-md-2 small flex-font-size">{{event.time}}</p>
+          <p class="mb-lg-3 mb-md-0 d-none d-lg-block small flex-font-size">{{event.location}}</p>
+        </blockquote>
+      </div>
     </div>
-    <div class="col-md-4 col-sm-12 event-detail-info d-none d-md-block">
-      <blockquote class="ml-lg-4 mt-lg-5 ml-md-3 mt-md-4 blockquote text-left">
-        <p class="mb-lg-4 mb-md-3"><b>Free</b></p>
-        <p class="mb-1">Event name name event name event: {{event.name}}</p>
-        <footer class="small blockquote-footer">Event owner or org</footer>
-      </blockquote>
-      <blockquote class="event-detail-timeloc ml-lg-4 ml-md-3 blockquote text-left">
-        <p class="mb-lg-1 mb-md-2 small">Event time: time</p>
-        <p class="mb-lg-4 mb-md-0 d-none d-lg-block small">Event location: loc</p>
-      </blockquote>
-    </div>
-  </div>
-  
-  <div class="row col-md-12 col-lg-11 mx-auto border p-0 m-0">
-      <div class="col-lg-8 col-md-12 event-detail-img p-0 m-0">
-          <blockquote class="ml-lg-4 mt-lg-5 ml-md-3 mt-md-3 blockquote text-left">
-              <p class="mb-lg-5 mb-md-3">some desc</p>
-              <!-- <footer class="blockquote-footer">Find and join any events you like.</footer> -->
-            </blockquote>
+      
+    <!-- detail information -->
+    <div class="row border p-0 mx-2 my-0">
+      <div class="col-lg-8 col-md-12 event-detail-img p-0 my-0">
+          <blockquote class="mx-4 mt-lg-5 mt-md-3 blockquote text-left">
+            <pre class="mb-lg-5 mb-md-3 flex-font-size mx-5 pr-2">{{event.description}}</pre>
+            <!-- <footer class="blockquote-footer">Find and join any events you like.</footer> -->
+          </blockquote>
       </div>
       <div class="col-lg-4 col-md-12 event-detail-info">
-        <blockquote class="ml-lg-4 mt-lg-5 ml-md-3 mt-md-3 blockquote text-left">
-          <p class="mb-lg-5 mb-md-3">other info ...</p>
+        <blockquote class="ml-3 mt-lg-5 mt-md-3 blockquote text-left">
+          <p class="mb-lg-5 mb-md-3 flex-font-size">other info ...</p>
           <!-- <footer class="blockquote-footer">Find and join any events you like.</footer> -->
         </blockquote>
       </div>
     </div>
 
-
+  </div> 
+  
 </div>

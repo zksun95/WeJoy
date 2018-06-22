@@ -46,9 +46,11 @@
           *ngFor="let event of events" >
       <a class="event_card_main" [routerLink]="['/events/detail',event.id]">
         <div class="card event_card">
-          <img class="card-img-top" src="https://cdn-images-1.medium.com/max/1200/1*V3Kfghg_jIV0ubxmAnCXBA.jpeg" alt="Card image cap">
+          <img class="card-img-top" src="{{event.imageUrl}}" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">{{event.name}}</h5>
+            <div class="card-title">
+              <p class="text-overflow">{{event.name}}</p>
+            </div>
             <p class="card-text">time: {{event.time}}</p>
           </div>
         </div>
