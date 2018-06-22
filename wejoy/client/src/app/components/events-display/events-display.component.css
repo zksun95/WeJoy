@@ -56,7 +56,7 @@ a.event_card_main:hover {
     /* max-height = line-height (1.2) * lines max number (3) */
     max-height: 3em; 
     /* fix problem when last visible word doesn't adjoin right side  */
-    text-align: justify;  
+    /* text-align: justify;   */
     /* place for '...' */
     margin-right: -1em;
     padding-right: 1em;
@@ -79,7 +79,7 @@ a.event_card_main:hover {
     /* absolute position */
     position: absolute;
     /* set position to right bottom corner of text */
-    right: 1.1em;
+    right: 1em;
     /* set width and height */
     width: 1em;
     height: 1em;
