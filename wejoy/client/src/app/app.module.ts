@@ -9,6 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { EventsDisplayComponent } from './components/events-display/events-display.component';
 import { EventsDetailComponent } from './components/events-detail/events-detail.component';
 
+import { GetEventsService } from './services/get-events.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,12 @@ import { EventsDetailComponent } from './components/events-detail/events-detail.
     BrowserModule,
     routing
   ],
-  providers: [],
+  providers: [
+    {
+      provide: "get_events",
+      useClass: GetEventsService
+    }
+  ],
   bootstrap: [AppComponent]
 })
 

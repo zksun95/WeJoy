@@ -2,3 +2,21 @@
     height: 240px;
     width: 320px
 } */
+
+/* .event_card{
+    width: 18rem;
+} */
+
+a.event_card_main:link, a:visited { 
+    color: black;
+    /* text-decoration: underline; */
+    cursor: hand;
+}
+
+a.event_card_main:link:active, a:visited:active { 
+    color: black;
+}
+
+a.event_card_main:hover {
+    text-decoration: none;
+}

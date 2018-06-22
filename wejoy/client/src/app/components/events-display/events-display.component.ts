@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Inject } from '@angular/core';
 import { Event } from '../../type/event';
 import { Subject, Subscription, Observable, Observer } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
@@ -17,35 +17,11 @@ export class EventsDisplayComponent implements OnInit {
 
   loading: boolean = true;
 
-  events_: Event[] = [
-    {
-      id:1,
-      name: "123",
-      time: "12:00",
-      description: "1st event",
-      location: "test loc",
-      owner: "user No.1"
-      },
-      {
-        id:2,
-        name: "2333",
-        time: "22:00",
-        description: "2st event",
-        location: "test loc2",
-        owner: "user No.2"
-      },
-      {
-        id:3,
-        name: "www",
-        time: "1:00",
-        description: "3st event",
-        location: "test location",
-        owner: "user No.1"
-      }
-  ];
   events: Event[] = [];
 
-  constructor() { }
+  constructor(
+    @Inject("get_events") private getEvents
+  ) { }
 
   ngOnInit() {
     this.loadMoreEvents();
@@ -53,13 +29,13 @@ export class EventsDisplayComponent implements OnInit {
                   .pipe(debounceTime(500))
                   .subscribe((res)=>{
                     console.log("loading!");
-                    this.events=this.events.concat(this.events_);
+                    this.events=this.events.concat(this.getEvents.loadMoreEvents_());
                     this.loading = false;
                   });
   }
 
   loadMoreEvents(): void{
-    this.events=this.events.concat(this.events_);
+    this.events=this.events.concat(this.getEvents.loadMoreEvents_());
     this.loading = false;
   }
 
