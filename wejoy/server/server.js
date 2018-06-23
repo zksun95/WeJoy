@@ -24,7 +24,7 @@ app.use(function(req, res){
 // })
 
 var server = http.createServer(app);
-io.attach(server);
+//io.attach(server);
 server.listen(3000);
 
 server.on('error', onError);

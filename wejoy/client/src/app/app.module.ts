@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { routing } from './app.routes';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
@@ -21,7 +23,9 @@ import { GetEventsService } from './services/get-events.service';
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    HttpModule,
+    HttpClientModule
   ],
   providers: [
     {
