@@ -68,27 +68,46 @@ var events = [
     }
 ];
 
+var EventModel = require("../models/eventModel");
+
 var getEvents = function() {
     return new Promise((resolve, reject) => {
-        resolve(events);
+        EventModel.find({}, function (err, events) {
+            if (err) {
+                reject(err);
+            }else{
+                resolve(events);
+            }
+        });
     });
 }
 
 var getEvent = function(id) {
     return new Promise((resolve, reject) => {
-        resolve(events.find(event => event.id === id));
+        EventModel.findOne({id: id}, function (err, event) {
+            if (err) {
+                reject(err);
+            }else{
+                resolve(event);
+            }
+        });
     });
 }
 
 var addEvent = function (newEvent) {
     return new Promise((resolve, reject) => {
-        if (events.find(event => event.name === newEvent.name)){
-            reject("Event already exists");
-        }else{
-            newEvent.id = events.length + 1;
-            events.push(newEvent);
-            resolve(newEvent);
-        }
+        EventModel.findOne({name: newEvent.name}, function (err, event) {
+            if(event){
+                reject("Problem name already exists");
+            }else{
+                EventModel.count({}, function (err, num) {
+                    newEvent.id = num + 1;
+                    var mongoEvent = new EventModel(newEvent);
+                    mongoEvent.save();
+                    resolve(newEvent);
+                });
+            }
+        });
     })
 }
 module.exports = {
