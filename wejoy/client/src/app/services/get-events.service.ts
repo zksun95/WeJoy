@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Event } from '../type/event';
 import { ObserveOnOperator } from 'rxjs/internal/operators/observeOn';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -78,18 +79,21 @@ export class GetEventsService {
       }
   ];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  loadMoreEvents_(): Event[]{
-    return this.fake_events;
+  loadMoreEvents(): Observable<Event[]>{
+    // return this.fake_events;
+    return this.http.get<Event[]>("api/v1/events");
   }
 
   getEventInfo(id: number): Observable<Event>{
     //return this.fake_events[id];
-    let res=new Observable<Event>((observer)=>{
-      observer.next(this.fake_events[id]);
-      observer.complete();
-    });
-    return res;
+    // let res=new Observable<Event>(
+    //   (observer)=>{
+    //   observer.next(this.fake_events[id]);
+    //   observer.complete();
+    // });
+    //return res;
+    return this.http.get<Event>(`api/v1/events/${id}`);
   }
 }
