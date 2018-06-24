@@ -12,6 +12,7 @@ import { EventsDisplayComponent } from './components/events-display/events-displ
 import { EventsDetailComponent } from './components/events-detail/events-detail.component';
 
 import { GetEventsService } from './services/get-events.service';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -31,8 +32,10 @@ import { GetEventsService } from './services/get-events.service';
     {
       provide: "get_events",
       useClass: GetEventsService
-    }
-  ],
+    }, {
+      provide: "auth",
+      useClass: AuthService
+    } ],
   bootstrap: [AppComponent]
 })
 

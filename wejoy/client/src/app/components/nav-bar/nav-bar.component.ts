@@ -5,7 +5,7 @@ import { VariableAst } from '@angular/compiler';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
 //import 'rxjs/add/operator/debounceTime'
-import { debounceTime } from 'rxjs/operators' 
+import { debounceTime } from 'rxjs/operators'
 //import { debounceTime, map } from 'rxjs/operators';
 
 
@@ -21,7 +21,7 @@ export class NavBarComponent implements OnInit {
   sub: Subscription;
 
   // searchBox: FormControl = new FormControl();
-  constructor(){}
+  constructor(@Inject('auth') private auth0){}
   // constructor(@Inject("auth") private auth,
   //             @Inject("keywords") private keywords,
   //             private router: Router) {
@@ -31,11 +31,21 @@ export class NavBarComponent implements OnInit {
   // ngAfterContentChecked(){
   //   if(localStorage.getItem('profile')){
   //     this.username = JSON.parse(localStorage.getItem('profile')).nickname;
-  //   } 
+  //   }
   // }
 
   // //d = new Date();
   ngOnInit(){}
+
+  login(): void{
+    this.auth0.login();
+  }
+
+
+
+  logout(): void{
+    this.auth0.logout();
+  }
   // ngOnInit() {
   //   this.sub = this.searchBox
   //                   .valueChanges
@@ -63,7 +73,7 @@ export class NavBarComponent implements OnInit {
   // }
 
   // signOut(): void{
-  //   this.auth.logout(); 
+  //   this.auth.logout();
   // }
 
   // updateProfile(): any{

@@ -82,7 +82,7 @@ export class GetEventsService {
   constructor(private http: HttpClient) { }
 
   loadMoreEvents(): Observable<Event[]>{
-    // return this.fake_events;
+     //return this.fake_events;
     return this.http.get<Event[]>("api/v1/events");
   }
 
