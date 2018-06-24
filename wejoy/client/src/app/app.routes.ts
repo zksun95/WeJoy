@@ -5,6 +5,7 @@ import { EventsDetailComponent } from './components/events-detail/events-detail.
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { UserHistoryComponent } from './components/user-history/user-history.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import {NewEventComponent} from "./components/new-event/new-event.component";
 
 
 // import { FileCreateComponent } from './others/file-create/file-create.component';
@@ -24,6 +25,10 @@ const routes: Routes = [
     {
         path: "events",
         component: EventsDisplayComponent,
+    },
+    {
+        path: "new-event",
+        component: NewEventComponent,
     },
     {
         path: "profile",

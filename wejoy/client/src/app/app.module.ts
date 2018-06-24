@@ -12,10 +12,15 @@ import { EventsDisplayComponent } from './components/events-display/events-displ
 import { EventsDetailComponent } from './components/events-detail/events-detail.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
+
 import { GetEventsService } from './services/get-events.service';
 import { AuthService } from './services/auth.service';
 import { UserHistoryComponent } from './components/user-history/user-history.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { NewEventComponent } from './components/new-event/new-event.component';
+import {importType} from "@angular/compiler/src/output/output_ast";
+
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -26,13 +31,15 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     EventsDetailComponent,
     UserProfileComponent,
     UserHistoryComponent,
-    HomePageComponent
+    HomePageComponent,
+    NewEventComponent,
   ],
   imports: [
     BrowserModule,
     routing,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     {
