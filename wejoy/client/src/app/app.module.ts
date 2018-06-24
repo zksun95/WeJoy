@@ -10,9 +10,12 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { EventsDisplayComponent } from './components/events-display/events-display.component';
 import { EventsDetailComponent } from './components/events-detail/events-detail.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 import { GetEventsService } from './services/get-events.service';
 import { AuthService } from './services/auth.service';
+import { UserHistoryComponent } from './components/user-history/user-history.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { AuthService } from './services/auth.service';
     NavBarComponent,
     FooterComponent,
     EventsDisplayComponent,
-    EventsDetailComponent
+    EventsDetailComponent,
+    UserProfileComponent,
+    UserHistoryComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

@@ -21,30 +21,32 @@ export class NavBarComponent implements OnInit {
   sub: Subscription;
 
   // searchBox: FormControl = new FormControl();
-  constructor(@Inject('auth') private auth0){}
+  constructor(@Inject("auth") private auth){
+    this.auth.handleAuthentication();
+  }
   // constructor(@Inject("auth") private auth,
   //             @Inject("keywords") private keywords,
   //             private router: Router) {
   //   this.auth.handleAuthentication();
   // }
 
-  // ngAfterContentChecked(){
-  //   if(localStorage.getItem('profile')){
-  //     this.username = JSON.parse(localStorage.getItem('profile')).nickname;
-  //   }
-  // }
+  ngAfterContentChecked(){
+    if(localStorage.getItem('profile')){
+      this.username = JSON.parse(localStorage.getItem('profile')).nickname;
+    }
+  }
 
   // //d = new Date();
   ngOnInit(){}
 
   login(): void{
-    this.auth0.login();
+    this.auth.login();
   }
 
 
 
   logout(): void{
-    this.auth0.logout();
+    this.auth.logout();
   }
   // ngOnInit() {
   //   this.sub = this.searchBox
