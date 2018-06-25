@@ -23,6 +23,7 @@ import {importType} from "@angular/compiler/src/output/output_ast";
 
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { EventCategoryComponent } from './components/event-category/event-category.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     HomePageComponent,
     NewEventComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    EventCategoryComponent
   ],
   imports: [
     BrowserModule,

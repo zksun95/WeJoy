@@ -62,6 +62,10 @@ const routes: Routes = [
     {
         path: "**",
         redirectTo: "events",
+    },
+    {
+    path: "event/:name",
+    component: EventsDisplayComponent,
     }
 ];
 
