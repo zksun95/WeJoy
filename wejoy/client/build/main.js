@@ -659,11 +659,14 @@ var NavBarComponent = /** @class */ (function () {
     // }
     NavBarComponent.prototype.ngAfterContentChecked = function () {
         if (localStorage.getItem('profile')) {
-            this.username = JSON.parse(localStorage.getItem('profile')).nickname;
+            this.username = JSON.parse(localStorage.getItem('profile')).username;
         }
     };
     // //d = new Date();
     NavBarComponent.prototype.ngOnInit = function () { };
+    NavBarComponent.prototype.logout = function () {
+        this.auth.logout();
+    };
     NavBarComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-nav-bar',
@@ -796,6 +799,7 @@ module.exports = "<div class=\"row login-card mx-auto\">\r\n  <p class=\"h3 mx-a
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignInComponent", function() { return SignInComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -805,13 +809,32 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
 
 var SignInComponent = /** @class */ (function () {
-    function SignInComponent() {
+    function SignInComponent(auth, router) {
+        this.auth = auth;
+        this.router = router;
     }
     SignInComponent.prototype.ngOnInit = function () {
+        if (this.auth.isAuthenticated()) {
+            this.router.navigate(['/home']);
+        }
     };
     SignInComponent.prototype.login = function () {
+        var _this = this;
+        var data = JSON.stringify({
+            "email": this.email,
+            "password": this.password
+        });
+        this.auth.login(data).subscribe(function (response) {
+            //console.log(response);
+            _this.auth.setUser(response['token'], JSON.stringify(response['user']));
+            _this.router.navigate(['/home']);
+        });
         console.log(this.email);
         console.log(this.password);
     };
@@ -821,7 +844,8 @@ var SignInComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./sign-in.component.html */ "./src/app/components/sign-in/sign-in.component.html"),
             styles: [__webpack_require__(/*! ./sign-in.component.css */ "./src/app/components/sign-in/sign-in.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])("auth")),
+        __metadata("design:paramtypes", [Object, _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], SignInComponent);
     return SignInComponent;
 }());
@@ -863,6 +887,7 @@ module.exports = "<div class=\"row signup-card mx-auto\">\r\n    <p class=\"h3 m
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignUpComponent", function() { return SignUpComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -872,9 +897,15 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
 
 var SignUpComponent = /** @class */ (function () {
-    function SignUpComponent() {
+    function SignUpComponent(auth, router) {
+        this.auth = auth;
+        this.router = router;
         this.email = "";
         this.username = "";
         this.password = "";
@@ -882,13 +913,23 @@ var SignUpComponent = /** @class */ (function () {
         this.agree = false;
     }
     SignUpComponent.prototype.ngOnInit = function () {
+        if (this.auth.isAuthenticated()) {
+            this.router.navigate(['/home']);
+        }
     };
     SignUpComponent.prototype.signup = function () {
-        console.log(this.email);
-        console.log(this.username);
-        console.log(this.password);
-        console.log(this.password_);
-        console.log(this.agree);
+        var _this = this;
+        var data = JSON.stringify({
+            "email": this.email,
+            "username": this.username,
+            "password": this.password
+        });
+        //console.log(data);
+        this.auth.signup(data).subscribe(function (response) {
+            //console.log(response['user']);
+            _this.auth.setUser(response['token'], JSON.stringify(response['user']));
+            _this.router.navigate(['/home']);
+        });
     };
     SignUpComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -896,7 +937,8 @@ var SignUpComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./sign-up.component.html */ "./src/app/components/sign-up/sign-up.component.html"),
             styles: [__webpack_require__(/*! ./sign-up.component.css */ "./src/app/components/sign-up/sign-up.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])("auth")),
+        __metadata("design:paramtypes", [Object, _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], SignUpComponent);
     return SignUpComponent;
 }());
@@ -1111,6 +1153,30 @@ var AuthService = /** @class */ (function () {
     };
     AuthService.prototype.getProfile = function () {
         return localStorage.getItem('profile');
+    };
+    AuthService.prototype.signup = function (data) {
+        var httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+                'Content-Type': 'application/json'
+            })
+        };
+        // return this.http.post('api/v1/files', file, httpOptions).toPromise().then((res: Response) => {
+        //   this.getFiles();
+        //   return res.json();
+        // }).catch(this.handleError);
+        return this.http.post('auth/signup', data, httpOptions);
+    };
+    AuthService.prototype.login = function (data) {
+        var httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+                'Content-Type': 'application/json'
+            })
+        };
+        return this.http.post('auth/login', data, httpOptions);
+    };
+    AuthService.prototype.logout = function () {
+        localStorage.removeItem('token');
+        localStorage.removeItem('profile');
     };
     AuthService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),

@@ -3,17 +3,37 @@ const bcrypt = require("bcrypt");
 
 const UserSchema = mongoose.Schema({
     email: {
-
+        type: String,
+        index: {unique: true}
     },
-    id: Number,
-    name: String,
-    time: String,
-    description:  String,
-    location: String,
-    owner: String,
-    imageUrl: String
+    password: String,
+    username: String,
 });
 
-var eventModel = mongoose.model("EventModel", EventSchema);
+UserSchema.methods.comparePass = function comparePass(password, callback){
+    bcrypt.compare(password, this.password, callback);
+}
 
-module.exports = eventModel;
+UserSchema.pre('save', function saveHook(next){
+    const user = this;
+    if(!user.isModified('password')){
+        return next();
+    }
+    return bcrypt.genSalt((saltError, salt)=>{
+        
+        if(saltError){
+            return next(saltError);
+        }
+        return bcrypt.hash(user.password, salt, (hashError, hash)=>{
+            if(hashError){
+                return next(hashError);
+            }
+            user.password = hash;
+            return next();
+        });
+    });
+});
+
+var userModel = mongoose.model("UserModel", UserSchema);
+
+module.exports = userModel;

@@ -580,8 +580,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/wenbo/Documents/WeJoy/WeJoy/wejoy/client/src/styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! /Users/wenbo/Documents/WeJoy/WeJoy/wejoy/client/node_modules/bootstrap/dist/css/bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
+__webpack_require__(/*! C:\Users\zzhic\Desktop\Project\WeJoy\wejoy\client\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\Users\zzhic\Desktop\Project\WeJoy\wejoy\client\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
 
 
 /***/ })

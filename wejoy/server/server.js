@@ -1,14 +1,23 @@
 var express = require("express");
 var app = express()
-var restRouter = require('./routes/rest');
 var mongoose = require("mongoose");
-
-var pageRouter = require("./routes/page");
+var passport = require("passport");
 var path = require("path");
 var http = require("http");
 
+var authRouter = require("./routes/auth");
+var restRouter = require('./routes/rest');
+var pageRouter = require("./routes/page");
+
 mongoose.connect("mongodb://root:root123@ds117061.mlab.com:17061/wejoy_db");
 
+app.use(passport.initialize());
+var localSignUpStrategy = require('./passport/signup');
+var localLogInStrategy = require('./passport/login');
+passport.use('local-signup', localSignUpStrategy);
+passport.use('local-login', localLogInStrategy);
+
+app.use('/auth', authRouter);
 app.use('/', pageRouter);
 app.use(express.static(path.join(__dirname, "../client/build/")));
 app.use("/api/v1", restRouter);

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject("auth") private auth,
+              public router: Router) { }
 
   email: string = "";
   username: string = "";
@@ -16,14 +18,23 @@ export class SignUpComponent implements OnInit {
   agree: boolean = false;
 
   ngOnInit() {
+    if(this.auth.isAuthenticated()){
+      this.router.navigate(['/home']);
+    }
   }
 
   signup(){
-    console.log(this.email);
-    console.log(this.username);
-    console.log(this.password);
-    console.log(this.password_);
-    console.log(this.agree);
+    let data = JSON.stringify({
+      "email": this.email,
+      "username": this.username,
+      "password": this.password
+    });
+    //console.log(data);
+    this.auth.signup(data).subscribe((response)=>{
+      //console.log(response['user']);
+      this.auth.setUser(response['token'], JSON.stringify(response['user']));
+      this.router.navigate(['/home']);
+    });
   }
 
 }

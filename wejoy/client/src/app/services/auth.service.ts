@@ -50,6 +50,34 @@ export class AuthService {
     return localStorage.getItem('profile');
   }
 
+  public signup(data): Observable<any>{
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      })
+    };
+
+    // return this.http.post('api/v1/files', file, httpOptions).toPromise().then((res: Response) => {
+    //   this.getFiles();
+    //   return res.json();
+    // }).catch(this.handleError);
+    return this.http.post<File>('auth/signup', data, httpOptions);
+  }
+
+  public login(data): Observable<any>{
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      })
+    };
+    return this.http.post<File>('auth/login', data, httpOptions);
+  }
+
+  public logout(){
+    localStorage.removeItem('token');
+    localStorage.removeItem('profile');
+  }
+
   // ------------------ using auth0 ------------------
   // public login() {
   //   return new Promise((resolve, reject)=>{

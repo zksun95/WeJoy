@@ -112,7 +112,7 @@ export class GetEventsService {
 
   addEvent(event: Event): Promise<Event>{
     var headers = new HttpHeaders({'content-type' :'application/json' })
-    return this.http.post('/api/v1/events',event)
+    return this.http.post('/api/v1/events', event)
       .toPromise()
       .then((res: Response) => {
         return res;
