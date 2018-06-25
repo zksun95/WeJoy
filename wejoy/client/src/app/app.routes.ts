@@ -5,7 +5,9 @@ import { EventsDetailComponent } from './components/events-detail/events-detail.
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { UserHistoryComponent } from './components/user-history/user-history.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
-import {NewEventComponent} from "./components/new-event/new-event.component";
+import { NewEventComponent } from "./components/new-event/new-event.component";
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
 // import { FileCreateComponent } from './others/file-create/file-create.component';
@@ -21,6 +23,14 @@ const routes: Routes = [
     {
         path: "home",
         component: HomePageComponent,
+    },
+    {
+        path: "signin",
+        component: SignInComponent,
+    },
+    {
+        path: "signup",
+        component: SignUpComponent,
     },
     {
         path: "events",

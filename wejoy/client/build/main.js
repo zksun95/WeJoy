@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<!-- <div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul> -->\n<app-nav-bar></app-nav-bar>\n<div style=\"min-height: calc(100vh - 230px);\">\n<router-outlet></router-outlet>\n</div>\n<app-footer></app-footer>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<!-- <div style=\"text-align:center\">\r\n  <h1>\r\n    Welcome to {{ title }}!\r\n  </h1>\r\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n</div>\r\n<h2>Here are some links to help you start: </h2>\r\n<ul>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\r\n  </li>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a></h2>\r\n  </li>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\r\n  </li>\r\n</ul> -->\r\n<app-nav-bar></app-nav-bar>\r\n<div style=\"min-height: calc(100vh - 230px);\">\r\n<router-outlet></router-outlet>\r\n</div>\r\n<app-footer></app-footer>\r\n"
 
 /***/ }),
 
@@ -93,21 +93,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.routes */ "./src/app/app.routes.ts");
-/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _components_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/nav-bar/nav-bar.component */ "./src/app/components/nav-bar/nav-bar.component.ts");
-/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
-/* harmony import */ var _components_events_display_events_display_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/events-display/events-display.component */ "./src/app/components/events-display/events-display.component.ts");
-/* harmony import */ var _components_events_detail_events_detail_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/events-detail/events-detail.component */ "./src/app/components/events-detail/events-detail.component.ts");
-/* harmony import */ var _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/user-profile/user-profile.component */ "./src/app/components/user-profile/user-profile.component.ts");
-/* harmony import */ var _services_get_events_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./services/get-events.service */ "./src/app/services/get-events.service.ts");
-/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
-/* harmony import */ var _components_user_history_user_history_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/user-history/user-history.component */ "./src/app/components/user-history/user-history.component.ts");
-/* harmony import */ var _components_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/home-page/home-page.component */ "./src/app/components/home-page/home-page.component.ts");
-/* harmony import */ var _components_new_event_new_event_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/new-event/new-event.component */ "./src/app/components/new-event/new-event.component.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.routes */ "./src/app/app.routes.ts");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/nav-bar/nav-bar.component */ "./src/app/components/nav-bar/nav-bar.component.ts");
+/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
+/* harmony import */ var _components_events_display_events_display_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/events-display/events-display.component */ "./src/app/components/events-display/events-display.component.ts");
+/* harmony import */ var _components_events_detail_events_detail_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/events-detail/events-detail.component */ "./src/app/components/events-detail/events-detail.component.ts");
+/* harmony import */ var _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/user-profile/user-profile.component */ "./src/app/components/user-profile/user-profile.component.ts");
+/* harmony import */ var _services_get_events_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/get-events.service */ "./src/app/services/get-events.service.ts");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var _components_user_history_user_history_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/user-history/user-history.component */ "./src/app/components/user-history/user-history.component.ts");
+/* harmony import */ var _components_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/home-page/home-page.component */ "./src/app/components/home-page/home-page.component.ts");
+/* harmony import */ var _components_new_event_new_event_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/new-event/new-event.component */ "./src/app/components/new-event/new-event.component.ts");
+/* harmony import */ var _components_sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/sign-in/sign-in.component */ "./src/app/components/sign-in/sign-in.component.ts");
+/* harmony import */ var _components_sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/sign-up/sign-up.component */ "./src/app/components/sign-up/sign-up.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -131,39 +133,43 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-                _components_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_6__["NavBarComponent"],
-                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__["FooterComponent"],
-                _components_events_display_events_display_component__WEBPACK_IMPORTED_MODULE_8__["EventsDisplayComponent"],
-                _components_events_detail_events_detail_component__WEBPACK_IMPORTED_MODULE_9__["EventsDetailComponent"],
-                _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_10__["UserProfileComponent"],
-                _components_user_history_user_history_component__WEBPACK_IMPORTED_MODULE_13__["UserHistoryComponent"],
-                _components_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_14__["HomePageComponent"],
-                _components_new_event_new_event_component__WEBPACK_IMPORTED_MODULE_15__["NewEventComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+                _components_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_7__["NavBarComponent"],
+                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_8__["FooterComponent"],
+                _components_events_display_events_display_component__WEBPACK_IMPORTED_MODULE_9__["EventsDisplayComponent"],
+                _components_events_detail_events_detail_component__WEBPACK_IMPORTED_MODULE_10__["EventsDetailComponent"],
+                _components_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_11__["UserProfileComponent"],
+                _components_user_history_user_history_component__WEBPACK_IMPORTED_MODULE_14__["UserHistoryComponent"],
+                _components_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_15__["HomePageComponent"],
+                _components_new_event_new_event_component__WEBPACK_IMPORTED_MODULE_16__["NewEventComponent"],
+                _components_sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_17__["SignInComponent"],
+                _components_sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_18__["SignUpComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routes__WEBPACK_IMPORTED_MODULE_2__["routing"],
-                _angular_http__WEBPACK_IMPORTED_MODULE_3__["HttpModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_16__["FormsModule"]
+                _app_routes__WEBPACK_IMPORTED_MODULE_3__["routing"],
+                _angular_http__WEBPACK_IMPORTED_MODULE_4__["HttpModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"]
             ],
             providers: [
                 {
                     provide: "get_events",
-                    useClass: _services_get_events_service__WEBPACK_IMPORTED_MODULE_11__["GetEventsService"]
+                    useClass: _services_get_events_service__WEBPACK_IMPORTED_MODULE_12__["GetEventsService"]
                 }, {
                     provide: "auth",
-                    useClass: _services_auth_service__WEBPACK_IMPORTED_MODULE_12__["AuthService"]
+                    useClass: _services_auth_service__WEBPACK_IMPORTED_MODULE_13__["AuthService"]
                 }
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -190,6 +196,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_user_history_user_history_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/user-history/user-history.component */ "./src/app/components/user-history/user-history.component.ts");
 /* harmony import */ var _components_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/home-page/home-page.component */ "./src/app/components/home-page/home-page.component.ts");
 /* harmony import */ var _components_new_event_new_event_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/new-event/new-event.component */ "./src/app/components/new-event/new-event.component.ts");
+/* harmony import */ var _components_sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/sign-in/sign-in.component */ "./src/app/components/sign-in/sign-in.component.ts");
+/* harmony import */ var _components_sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/sign-up/sign-up.component */ "./src/app/components/sign-up/sign-up.component.ts");
+
+
 
 
 
@@ -209,6 +219,14 @@ var routes = [
     {
         path: "home",
         component: _components_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_5__["HomePageComponent"],
+    },
+    {
+        path: "signin",
+        component: _components_sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_7__["SignInComponent"],
+    },
+    {
+        path: "signup",
+        component: _components_sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_8__["SignUpComponent"],
     },
     {
         path: "events",
@@ -252,7 +270,7 @@ var routing = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRo
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".event-detail-timeloc{\n    position:absolute;\n    bottom:0;\n}\n\n.evetn-card{\n    max-width: 1080px;\n    /* width: minmax(max-content, 300px) minmax(200px, 1fr) 150px; */\n}\n\n/* @media (max-width: @screen-xs) {\n    body{font-size: 10px;}\n}\n\n@media (max-width: @screen-sm) {\n    body{font-size: 14px;}\n} */\n\n.flex-font-size{\n    /* font-size: 2vmin; */\n    font-size: 80%;\n}\n\npre {\n    white-space: pre-wrap;       /* css-3 */\n    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */\n    white-space: -pre-wrap;      /* Opera 4-6 */\n    white-space: -o-pre-wrap;    /* Opera 7 */\n    word-wrap: break-word;       /* Internet Explorer 5.5+ */\n}\n"
+module.exports = ".event-detail-timeloc{\r\n    position:absolute;\r\n    bottom:0;\r\n}\r\n\r\n.evetn-card{\r\n    max-width: 1080px;\r\n    /* width: minmax(max-content, 300px) minmax(200px, 1fr) 150px; */\r\n}\r\n\r\n/* @media (max-width: @screen-xs) {\r\n    body{font-size: 10px;}\r\n}\r\n\r\n@media (max-width: @screen-sm) {\r\n    body{font-size: 14px;}\r\n} */\r\n\r\n.flex-font-size{\r\n    /* font-size: 2vmin; */\r\n    font-size: 80%;\r\n}\r\n\r\npre {\r\n    white-space: pre-wrap;       /* css-3 */\r\n    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */\r\n    white-space: -pre-wrap;      /* Opera 4-6 */\r\n    white-space: -o-pre-wrap;    /* Opera 7 */\r\n    word-wrap: break-word;       /* Internet Explorer 5.5+ */\r\n}\r\n"
 
 /***/ }),
 
@@ -263,7 +281,7 @@ module.exports = ".event-detail-timeloc{\n    position:absolute;\n    bottom:0;\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div class=\"container\" *ngIf=\"event\"> -->\n<div class=\"mx-auto\" *ngIf=\"event\">\n  <div class=\"evetn-card mx-auto\">\n\n    <!-- pic and info on the side of pic, info will disable when screen too small -->\n    <div class=\"row border-right border-top p-0 mx-2 mb-0 mt-lg-5 mt-md-2\">\n      <div class=\"col-md-8 col-sm-12 event-detail-img p-0 m-0\">\n        <img class=\"card-img-left img-fluid\" src=\"{{event.imageUrl}}\" >\n      </div>\n      <div class=\"col-md-4 col-sm-12 event-detail-info d-none d-md-block\">\n        <blockquote class=\"ml-3 mt-4 blockquote text-left\">\n          <p class=\"mb-lg-4 mb-md-3 flex-font-size text-secondary\"><b>Free</b></p>\n          <p class=\"mb-1 flex-font-size font-weight-bold\">{{event.name}}</p>\n          <footer class=\"small blockquote-footer\">by {{event.owner}}</footer>\n        </blockquote>\n        <blockquote class=\"event-detail-timeloc mx-3 blockquote text-left\">\n          <p class=\"mb-lg-1 mb-md-2 small flex-font-size text-secondary\">{{event.time}}</p>\n          <p class=\"mb-lg-3 mb-md-0 d-none d-lg-block small flex-font-size text-secondary\">{{event.location}}</p>\n        </blockquote>\n      </div>\n    </div>\n\n    <!-- info appear when screen smaller than md -->\n    <div class=\"row p-0 mx-2 border-left border-right d-block d-md-none\">\n      <p class=\"m-0 px-3 pt-3 font-weight-bold\">{{event.name}}</p>\n    </div>\n    <div class=\"row p-0 mx-2 border-left border-right d-block d-md-none\">\n      <p class=\"m-0 px-3 pt-3\">{{event.location}}</p>\n    </div>\n    <div class=\"row p-0 mx-2 border-left border-right d-block d-md-none\">\n      <p class=\"m-0 px-3 pb-3\">{{event.time}}</p>\n    </div>\n\n    <!-- button and other info -->\n    <div class=\"row border border-bottom-0 p-0 mx-2\">\n      <div class=\"col-md-8 col-sm-6 mx-auto my-auto\">\n        <p class=\"text-secondary ml-3 p-0 my-0 align-middle d-block d-md-none\"><b>Free</b></p>\n      </div>\n      <div class=\"col-md-4 col-sm-6 mx-auto text-center\">\n        <!-- <button type=\"button\" class=\"btn btn-success my-3 col-11\">I'M IN</button> -->\n        <div class=\"btn-group col-12 my-3\" role=\"group\" aria-label=\"Basic example\">\n          <button type=\"button\" class=\"btn btn-secondary btn-outline-success col-lg-10 col-md-9 col-sm-10\">I'M IN</button>\n          <button type=\"button\" class=\"btn btn-secondary btn-outline-success col-lg-2 col-md-3 col-sm-2\">❤️</button>\n          <!-- <button type=\"button\" class=\"btn btn-secondary btn-outline-success col-2\">💔</button> -->\n        </div>\n      </div>\n    </div>\n    <!-- detail information -->\n    <div class=\"row border p-0 mx-2 my-0\">\n      <div class=\"col-lg-8 col-md-12 event-detail-img p-0 my-0\">\n          <blockquote class=\"mx-4 mt-lg-5 mt-md-3 blockquote text-left\">\n            <pre class=\"mb-lg-5 mb-md-3 flex-font-size mx-5 pr-2\">{{event.description}}</pre>\n            <!-- <footer class=\"blockquote-footer\">Find and join any events you like.</footer> -->\n          </blockquote>\n      </div>\n      <div class=\"col-lg-4 col-md-12 event-detail-info\">\n        <blockquote class=\"ml-3 mt-lg-5 mt-md-3 blockquote text-left\">\n          <p class=\"mb-lg-5 mb-md-3 flex-font-size\">other info ...</p>\n          <!-- <footer class=\"blockquote-footer\">Find and join any events you like.</footer> -->\n        </blockquote>\n      </div>\n    </div>\n\n  </div> \n  \n</div>"
+module.exports = "<!-- <div class=\"container\" *ngIf=\"event\"> -->\r\n<div class=\"mx-auto\" *ngIf=\"event\">\r\n  <div class=\"evetn-card mx-auto\">\r\n\r\n    <!-- pic and info on the side of pic, info will disable when screen too small -->\r\n    <div class=\"row border-right border-top p-0 mx-2 mb-0 mt-lg-5 mt-md-2\">\r\n      <div class=\"col-md-8 col-sm-12 event-detail-img p-0 m-0\">\r\n        <img class=\"card-img-left img-fluid\" src=\"{{event.imageUrl}}\" >\r\n      </div>\r\n      <div class=\"col-md-4 col-sm-12 event-detail-info d-none d-md-block\">\r\n        <blockquote class=\"ml-3 mt-4 blockquote text-left\">\r\n          <p class=\"mb-lg-4 mb-md-3 flex-font-size text-secondary\"><b>Free</b></p>\r\n          <p class=\"mb-1 flex-font-size font-weight-bold\">{{event.name}}</p>\r\n          <footer class=\"small blockquote-footer\">by {{event.owner}}</footer>\r\n        </blockquote>\r\n        <blockquote class=\"event-detail-timeloc mx-3 blockquote text-left\">\r\n          <p class=\"mb-lg-1 mb-md-2 small flex-font-size text-secondary\">{{event.time}}</p>\r\n          <p class=\"mb-lg-3 mb-md-0 d-none d-lg-block small flex-font-size text-secondary\">{{event.location}}</p>\r\n        </blockquote>\r\n      </div>\r\n    </div>\r\n\r\n    <!-- info appear when screen smaller than md -->\r\n    <div class=\"row p-0 mx-2 border-left border-right d-block d-md-none\">\r\n      <p class=\"m-0 px-3 pt-3 font-weight-bold\">{{event.name}}</p>\r\n    </div>\r\n    <div class=\"row p-0 mx-2 border-left border-right d-block d-md-none\">\r\n      <p class=\"m-0 px-3 pt-3\">{{event.location}}</p>\r\n    </div>\r\n    <div class=\"row p-0 mx-2 border-left border-right d-block d-md-none\">\r\n      <p class=\"m-0 px-3 pb-3\">{{event.time}}</p>\r\n    </div>\r\n\r\n    <!-- button and other info -->\r\n    <div class=\"row border border-bottom-0 p-0 mx-2\">\r\n      <div class=\"col-md-8 col-sm-6 mx-auto my-auto\">\r\n        <p class=\"text-secondary ml-3 p-0 my-0 align-middle d-block d-md-none\"><b>Free</b></p>\r\n      </div>\r\n      <div class=\"col-md-4 col-sm-6 mx-auto text-center\">\r\n        <!-- <button type=\"button\" class=\"btn btn-success my-3 col-11\">I'M IN</button> -->\r\n        <div class=\"btn-group col-12 my-3\" role=\"group\" aria-label=\"Basic example\">\r\n          <button type=\"button\" class=\"btn btn-secondary btn-outline-success col-lg-10 col-md-9 col-sm-10\">I'M IN</button>\r\n          <button type=\"button\" class=\"btn btn-secondary btn-outline-success col-lg-2 col-md-3 col-sm-2\">❤️</button>\r\n          <!-- <button type=\"button\" class=\"btn btn-secondary btn-outline-success col-2\">💔</button> -->\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <!-- detail information -->\r\n    <div class=\"row border p-0 mx-2 my-0\">\r\n      <div class=\"col-lg-8 col-md-12 event-detail-img p-0 my-0\">\r\n          <blockquote class=\"mx-4 mt-lg-5 mt-md-3 blockquote text-left\">\r\n            <pre class=\"mb-lg-5 mb-md-3 flex-font-size mx-5 pr-2\">{{event.description}}</pre>\r\n            <!-- <footer class=\"blockquote-footer\">Find and join any events you like.</footer> -->\r\n          </blockquote>\r\n      </div>\r\n      <div class=\"col-lg-4 col-md-12 event-detail-info\">\r\n        <blockquote class=\"ml-3 mt-lg-5 mt-md-3 blockquote text-left\">\r\n          <p class=\"mb-lg-5 mb-md-3 flex-font-size\">other info ...</p>\r\n          <!-- <footer class=\"blockquote-footer\">Find and join any events you like.</footer> -->\r\n        </blockquote>\r\n      </div>\r\n    </div>\r\n\r\n  </div> \r\n  \r\n</div>"
 
 /***/ }),
 
@@ -332,7 +350,7 @@ var EventsDetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* .event_card_img{\n    height: 240px;\n    width: 320px\n} */\n\n/* .event_card{\n    width: 18rem;\n} */\n\na.event_card_main:link, a:visited { \n    color: black;\n    /* text-decoration: underline; */\n    cursor: hand;\n}\n\na.event_card_main:link:active, a:visited:active { \n    color: black;\n}\n\na.event_card_main:hover {\n    text-decoration: none;\n}\n\n.card-title{\n    height: 3em;\n    /* white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis; */\n}\n\n/* .text-overflow{\n    font-size: 120%;\n    height: 5em;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n} */\n\n/* .text-overflow {\n    -webkit-line-clamp: 2;\n    overflow : hidden;\n    text-overflow: ellipsis;\n    display: -webkit-box;\n    -webkit-box-orient: vertical;\n  } */\n\n/* styles for '...' */\n\n.text-overflow {\n    font-size: 120%;\n    /* hide text if it more than N lines  */\n    overflow: hidden;\n    /* for set '...' in absolute position */\n    position: relative; \n    /* use this value to count block height */\n    /* line-height: 1.2em; */\n    /* max-height = line-height (1.2) * lines max number (3) */\n    max-height: 3em; \n    /* fix problem when last visible word doesn't adjoin right side  */\n    /* text-align: justify;   */\n    /* place for '...' */\n    margin-right: -1em;\n    padding-right: 1em;\n  }\n\n/* create the ... */\n\n.text-overflow:before {\n    /* points in the end */\n    content: '...';\n    /* absolute position */\n    position: absolute;\n    /* set position to right bottom corner of block */\n    right: 1.1em;\n    bottom: 0;\n    background: white;\n  }\n\n/* hide ... if we have text, which is less than or equal to max lines */\n\n.text-overflow:after {\n    /* points in the end */\n    content: '';\n    /* absolute position */\n    position: absolute;\n    /* set position to right bottom corner of text */\n    right: 1em;\n    /* set width and height */\n    width: 1em;\n    height: 1em;\n    margin-top: 0.2em;\n    /* bg color = bg color under block */\n    background: white;\n  }\n"
+module.exports = "/* .event_card_img{\r\n    height: 240px;\r\n    width: 320px\r\n} */\r\n\r\n/* .event_card{\r\n    width: 18rem;\r\n} */\r\n\r\na.event_card_main:link, a:visited { \r\n    color: black;\r\n    /* text-decoration: underline; */\r\n    cursor: hand;\r\n}\r\n\r\na.event_card_main:link:active, a:visited:active { \r\n    color: black;\r\n}\r\n\r\na.event_card_main:hover {\r\n    text-decoration: none;\r\n}\r\n\r\n.card-title{\r\n    height: 3em;\r\n    /* white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis; */\r\n}\r\n\r\n/* .text-overflow{\r\n    font-size: 120%;\r\n    height: 5em;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n} */\r\n\r\n/* .text-overflow {\r\n    -webkit-line-clamp: 2;\r\n    overflow : hidden;\r\n    text-overflow: ellipsis;\r\n    display: -webkit-box;\r\n    -webkit-box-orient: vertical;\r\n  } */\r\n\r\n/* styles for '...' */\r\n\r\n.text-overflow {\r\n    font-size: 120%;\r\n    /* hide text if it more than N lines  */\r\n    overflow: hidden;\r\n    /* for set '...' in absolute position */\r\n    position: relative; \r\n    /* use this value to count block height */\r\n    /* line-height: 1.2em; */\r\n    /* max-height = line-height (1.2) * lines max number (3) */\r\n    max-height: 3em; \r\n    /* fix problem when last visible word doesn't adjoin right side  */\r\n    /* text-align: justify;   */\r\n    /* place for '...' */\r\n    margin-right: -1em;\r\n    padding-right: 1em;\r\n  }\r\n\r\n/* create the ... */\r\n\r\n.text-overflow:before {\r\n    /* points in the end */\r\n    content: '...';\r\n    /* absolute position */\r\n    position: absolute;\r\n    /* set position to right bottom corner of block */\r\n    right: 1.1em;\r\n    bottom: 0;\r\n    background: white;\r\n  }\r\n\r\n/* hide ... if we have text, which is less than or equal to max lines */\r\n\r\n.text-overflow:after {\r\n    /* points in the end */\r\n    content: '';\r\n    /* absolute position */\r\n    position: absolute;\r\n    /* set position to right bottom corner of text */\r\n    right: 1em;\r\n    /* set width and height */\r\n    width: 1em;\r\n    height: 1em;\r\n    margin-top: 0.2em;\r\n    /* bg color = bg color under block */\r\n    background: white;\r\n  }\r\n"
 
 /***/ }),
 
@@ -343,7 +361,7 @@ module.exports = "/* .event_card_img{\n    height: 240px;\n    width: 320px\n} *
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"carouselExampleSlidesOnly\" class=\"carousel slide d-none d-sm-block\" data-ride=\"carousel\" >\n  <div class=\"carousel-inner\">\n    <div class=\"carousel-item active\">\n      <img class=\"d-block w-100\" src=\"../../../assets/pics/index1.jpg\" alt=\"First slide\">\n    </div>\n    <div class=\"carousel-item\">\n      <img class=\"d-block w-100\" src=\"../../../assets/pics/index2.jpg\" alt=\"Second slide\">\n    </div>\n    <div class=\"carousel-item\">\n      <img class=\"d-block w-100\" src=\"../../../assets/pics/index3.jpg\" alt=\"Third slide\">\n    </div>\n  </div>\n</div>\n\n\n<!-- <div>\n  <p class=\"mx-auto\">Discover possibilities</p>\n</div> -->\n<blockquote class=\"mt-5 blockquote text-center\">\n  <p class=\"mb-0\"><b>Discover possibilities test!!!!!!!</b></p>\n  <!-- <footer class=\"blockquote-footer\">Find and join any events you like.</footer> -->\n</blockquote>\n\n\n<div class=\"container\">\n\n\n  <div class=\"row\" >\n\n    <!-- <div class=\"event_card col-lg-4 col-md-5 mx-md-auto my-4 col-sm-10\"\n        *ngFor=\"let event of events\">\n      <a [routerLink]=\"['/events/detail',event.id]\">\n        <div class=\"img-thumbnail\">\n          <img class=\"event_card_img img-fluid\" src=\"https://cdn-images-1.medium.com/max/1200/1*V3Kfghg_jIV0ubxmAnCXBA.jpeg\" />\n          <div class=\"caption event_card_info col-12\">\n            <h5 class=\"mt-2\">{{event.name}}</h5>\n            <dl>\n              <dd>time: {{event.time}}</dd>\n              <dd>time: {{event.time}}</dd>\n            </dl>\n          </div>\n        </div>\n      </a>\n    </div> -->\n\n    <!-- card: -->\n    <div class=\"mx-auto my-4 col-lg-4 col-md-6 col-sm-10\"\n          *ngFor=\"let event of events\" >\n      <a class=\"event_card_main\" [routerLink]=\"['/events/detail',event.id]\">\n        <div class=\"card event_card\">\n          <img class=\"card-img-top\" src=\"{{event.imageUrl}}\" alt=\"Card image cap\">\n          <div class=\"card-body\">\n            <div class=\"card-title\">\n              <p class=\"text-overflow font-weight-bold\">{{event.name}}</p>\n            </div>\n            <p class=\"card-text\">time: {{event.time}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n\n\n  </div>\n\n  <div class=\"row\" *ngIf=\"loading\">\n    <!-- <h3 class=\"mx-auto\">Loading ...</h3> -->\n    <img class=\"mx-auto\" src=\"../../../assets/svg/Flickr-1.2s-88px.svg\" />\n  </div>\n\n</div>\n"
+module.exports = "<div id=\"carouselExampleSlidesOnly\" class=\"carousel slide d-none d-sm-block\" data-ride=\"carousel\" >\r\n  <div class=\"carousel-inner\">\r\n    <div class=\"carousel-item active\">\r\n      <img class=\"d-block w-100\" src=\"../../../assets/pics/index1.jpg\" alt=\"First slide\">\r\n    </div>\r\n    <div class=\"carousel-item\">\r\n      <img class=\"d-block w-100\" src=\"../../../assets/pics/index2.jpg\" alt=\"Second slide\">\r\n    </div>\r\n    <div class=\"carousel-item\">\r\n      <img class=\"d-block w-100\" src=\"../../../assets/pics/index3.jpg\" alt=\"Third slide\">\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<!-- <div>\r\n  <p class=\"mx-auto\">Discover possibilities</p>\r\n</div> -->\r\n<blockquote class=\"mt-5 blockquote text-center\">\r\n  <p class=\"mb-0\"><b>Discover possibilities test!!!!!!!</b></p>\r\n  <!-- <footer class=\"blockquote-footer\">Find and join any events you like.</footer> -->\r\n</blockquote>\r\n\r\n\r\n<div class=\"container\">\r\n\r\n\r\n  <div class=\"row\" >\r\n\r\n    <!-- <div class=\"event_card col-lg-4 col-md-5 mx-md-auto my-4 col-sm-10\"\r\n        *ngFor=\"let event of events\">\r\n      <a [routerLink]=\"['/events/detail',event.id]\">\r\n        <div class=\"img-thumbnail\">\r\n          <img class=\"event_card_img img-fluid\" src=\"https://cdn-images-1.medium.com/max/1200/1*V3Kfghg_jIV0ubxmAnCXBA.jpeg\" />\r\n          <div class=\"caption event_card_info col-12\">\r\n            <h5 class=\"mt-2\">{{event.name}}</h5>\r\n            <dl>\r\n              <dd>time: {{event.time}}</dd>\r\n              <dd>time: {{event.time}}</dd>\r\n            </dl>\r\n          </div>\r\n        </div>\r\n      </a>\r\n    </div> -->\r\n\r\n    <!-- card: -->\r\n    <div class=\"mx-auto my-4 col-lg-4 col-md-6 col-sm-10\"\r\n          *ngFor=\"let event of events\" >\r\n      <a class=\"event_card_main\" [routerLink]=\"['/events/detail',event.id]\">\r\n        <div class=\"card event_card\">\r\n          <img class=\"card-img-top\" src=\"{{event.imageUrl}}\" alt=\"Card image cap\">\r\n          <div class=\"card-body\">\r\n            <div class=\"card-title\">\r\n              <p class=\"text-overflow font-weight-bold\">{{event.name}}</p>\r\n            </div>\r\n            <p class=\"card-text\">time: {{event.time}}</p>\r\n          </div>\r\n        </div>\r\n      </a>\r\n    </div>\r\n\r\n\r\n  </div>\r\n\r\n  <div class=\"row\" *ngIf=\"loading\">\r\n    <!-- <h3 class=\"mx-auto\">Loading ...</h3> -->\r\n    <img class=\"mx-auto\" src=\"../../../assets/svg/Flickr-1.2s-88px.svg\" />\r\n  </div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -458,7 +476,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Footer -->\n<footer class=\"page-footer font-small blue pt-4 mt-4\" style=\"background-color: #e9e9e9;\">\n  <div class=\"container\">\n    <div class=\"container-fluid text-center text-md-left\">\n      <div class=\"row\">\n\n        <div class=\"col-md-6 mt-md-0 mt-3\">\n          <h5>WeJoy</h5>\n          <p>Find and join differnet events.</p>\n        </div>\n  \n        <!-- <hr class=\"clearfix w-100 d-md-none pb-3\">\n        <div class=\"col-md-6 mb-md-0 mb-3\">\n  \n          <h5 class=\"text-uppercase\">Links</h5>\n  \n          <ul class=\"list-unstyled\">\n            <li>\n              <a href=\"#!\">Link 1</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 2</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 3</a>\n            </li>\n            <li>\n              <a href=\"#!\">Link 4</a>\n            </li>\n          </ul>\n        </div> -->\n  \n      </div>\n  \n    </div>\n    <div class=\"footer-copyright text-center py-3\">© 2018 Copyright:\n      <a> WeJoy.com</a>\n    </div>\n  </div>\n</footer>\n"
+module.exports = "<!-- Footer -->\r\n<footer class=\"page-footer font-small blue pt-4 mt-4\" style=\"background-color: #e9e9e9;\">\r\n  <div class=\"container\">\r\n    <div class=\"container-fluid text-center text-md-left\">\r\n      <div class=\"row\">\r\n\r\n        <div class=\"col-md-6 mt-md-0 mt-3\">\r\n          <h5>WeJoy</h5>\r\n          <p>Find and join differnet events.</p>\r\n        </div>\r\n  \r\n        <!-- <hr class=\"clearfix w-100 d-md-none pb-3\">\r\n        <div class=\"col-md-6 mb-md-0 mb-3\">\r\n  \r\n          <h5 class=\"text-uppercase\">Links</h5>\r\n  \r\n          <ul class=\"list-unstyled\">\r\n            <li>\r\n              <a href=\"#!\">Link 1</a>\r\n            </li>\r\n            <li>\r\n              <a href=\"#!\">Link 2</a>\r\n            </li>\r\n            <li>\r\n              <a href=\"#!\">Link 3</a>\r\n            </li>\r\n            <li>\r\n              <a href=\"#!\">Link 4</a>\r\n            </li>\r\n          </ul>\r\n        </div> -->\r\n  \r\n      </div>\r\n  \r\n    </div>\r\n    <div class=\"footer-copyright text-center py-3\">© 2018 Copyright:\r\n      <a> WeJoy.com</a>\r\n    </div>\r\n  </div>\r\n</footer>\r\n"
 
 /***/ }),
 
@@ -521,7 +539,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"carouselExampleSlidesOnly\" class=\"carousel slide d-none d-sm-block\" data-ride=\"carousel\" >\n  <div class=\"carousel-inner\">\n    <div class=\"carousel-item active\">\n      <img class=\"d-block w-100\" src=\"../../../assets/pics/index1.jpg\" alt=\"First slide\">\n    </div>\n    <div class=\"carousel-item\">\n      <img class=\"d-block w-100\" src=\"../../../assets/pics/index2.jpg\" alt=\"Second slide\">\n    </div>\n    <div class=\"carousel-item\">\n      <img class=\"d-block w-100\" src=\"../../../assets/pics/index3.jpg\" alt=\"Third slide\">\n    </div>\n  </div>\n</div>\n\n\n<!-- <div>\n  <p class=\"mx-auto\">Discover possibilities</p>\n</div> -->\n<blockquote class=\"mt-5 blockquote text-center\">\n  <p class=\"mb-0\"><b>Discover possibilities</b></p>\n  <!-- <footer class=\"blockquote-footer\">Find and join any events you like.</footer> -->\n</blockquote>\n\n\n<div class=\"container\">\n  <div class=\"row\" >\n\n    <!-- card: -->\n    <div class=\"mx-auto my-4 col-lg-4 col-md-6 col-sm-10\"\n          *ngFor=\"let event of events\" >\n      <a class=\"event_card_main\" [routerLink]=\"['/events/detail',event.id]\">\n        <div class=\"card event_card\">\n          <img class=\"card-img-top\" src=\"{{event.imageUrl}}\" alt=\"Card image cap\">\n          <div class=\"card-body\">\n            <div class=\"card-title\">\n              <p class=\"text-overflow font-weight-bold\">{{event.name}}</p>\n            </div>\n            <p class=\"card-text\">time: {{event.time}}</p>\n          </div>\n        </div>\n      </a>\n    </div>\n    \n\n  </div>\n  \n  <!-- cat-->\n  <div class=\"row\" *ngIf=\"loading\">\n    <!-- <h3 class=\"mx-auto\">Loading ...</h3> -->\n    <img class=\"mx-auto\" src=\"../../../assets/svg/Flickr-1.2s-88px.svg\" />\n  </div>\n\n</div>\n"
+module.exports = "<div id=\"carouselExampleSlidesOnly\" class=\"carousel slide d-none d-sm-block\" data-ride=\"carousel\" >\r\n  <div class=\"carousel-inner\">\r\n    <div class=\"carousel-item active\">\r\n      <img class=\"d-block w-100\" src=\"../../../assets/pics/index1.jpg\" alt=\"First slide\">\r\n    </div>\r\n    <div class=\"carousel-item\">\r\n      <img class=\"d-block w-100\" src=\"../../../assets/pics/index2.jpg\" alt=\"Second slide\">\r\n    </div>\r\n    <div class=\"carousel-item\">\r\n      <img class=\"d-block w-100\" src=\"../../../assets/pics/index3.jpg\" alt=\"Third slide\">\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n<!-- <div>\r\n  <p class=\"mx-auto\">Discover possibilities</p>\r\n</div> -->\r\n<blockquote class=\"mt-5 blockquote text-center\">\r\n  <p class=\"mb-0\"><b>Discover possibilities</b></p>\r\n  <!-- <footer class=\"blockquote-footer\">Find and join any events you like.</footer> -->\r\n</blockquote>\r\n\r\n\r\n<div class=\"container\">\r\n  <div class=\"row\" >\r\n\r\n    <!-- card: -->\r\n    <div class=\"mx-auto my-4 col-lg-4 col-md-6 col-sm-10\"\r\n          *ngFor=\"let event of events\" >\r\n      <a class=\"event_card_main\" [routerLink]=\"['/events/detail',event.id]\">\r\n        <div class=\"card event_card\">\r\n          <img class=\"card-img-top\" src=\"{{event.imageUrl}}\" alt=\"Card image cap\">\r\n          <div class=\"card-body\">\r\n            <div class=\"card-title\">\r\n              <p class=\"text-overflow font-weight-bold\">{{event.name}}</p>\r\n            </div>\r\n            <p class=\"card-text\">time: {{event.time}}</p>\r\n          </div>\r\n        </div>\r\n      </a>\r\n    </div>\r\n    \r\n\r\n  </div>\r\n  \r\n  <!-- cat-->\r\n  <div class=\"row\" *ngIf=\"loading\">\r\n    <!-- <h3 class=\"mx-auto\">Loading ...</h3> -->\r\n    <img class=\"mx-auto\" src=\"../../../assets/svg/Flickr-1.2s-88px.svg\" />\r\n  </div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -587,7 +605,7 @@ var HomePageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".nav-go-right{\n    position: absolute;\n    right: 0px\n}"
+module.exports = ".nav-go-right{\r\n    position: absolute;\r\n    right: 0px\r\n}"
 
 /***/ }),
 
@@ -598,7 +616,7 @@ module.exports = ".nav-go-right{\n    position: absolute;\n    right: 0px\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light sticky-top px-3 pt-3 pb-2\" style=\"background-color: #e3f2fd;\">\n  <!-- <div class=\"container\"> -->\n    <a class=\"navbar-brand\" href=\"#\">WeJoy</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarTogglerDemo\" aria-controls=\"navbarTogglerDemo\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarTogglerDemo\">\n      <ul class=\"navbar-nav mr-2 mt-2 mt-lg-0\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/events']\" >Events</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" [routerLink]=\"['/new-event']\">Create</a>\n        </li>\n      </ul>\n\n      <div class=\"form-inline my-2 mr-auto my-lg-0\">\n        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\">\n        <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n      </div>\n\n      <div class=\"form-inline my-2 mr-2 my-lg-0\" *ngIf=\"!auth.isAuthenticated()\">\n        <button class=\"btn btn-success my-2 my-sm-0\" (click)=\"login()\">Sign In</button>\n      </div>\n\n      <ul class=\"navbar-nav navbar-right\" *ngIf=\"auth.isAuthenticated()\">\n        <li class=\"nav-item dropdown\" >\n            <a class=\"nav-link dropdown-toggle\" href=\"just to make the mouse to become a hand\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n              {{username}}\n            </a>\n            <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdown\">\n              <a class=\"dropdown-item\" [routerLink]=\"['/profile']\" >Profile</a>\n              <a class=\"dropdown-item\" [routerLink]=\"['/history']\" >My Events</a>\n              <div class=\"dropdown-divider\"></div>\n              <a class=\"dropdown-item\" href=\"#\" (click)=\"logout()\" >Log Out</a>\n            </div>\n          </li>\n      </ul>\n\n    </div>\n  <!-- </div> -->\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light sticky-top px-3 pt-3 pb-2\" style=\"background-color: #e3f2fd;\">\r\n  <!-- <div class=\"container\"> -->\r\n    <a class=\"navbar-brand\" href=\"#\">WeJoy</a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarTogglerDemo\" aria-controls=\"navbarTogglerDemo\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarTogglerDemo\">\r\n      <ul class=\"navbar-nav mr-2 mt-2 mt-lg-0\">\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [routerLink]=\"['/events']\" >Events</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [routerLink]=\"['/new-event']\">Create</a>\r\n        </li>\r\n      </ul>\r\n\r\n      <div class=\"form-inline my-2 mr-auto my-lg-0\">\r\n        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\">\r\n        <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n      </div>\r\n\r\n      <div class=\"form-inline my-2 mr-2 my-lg-0\" *ngIf=\"!auth.isAuthenticated()\">\r\n        <button class=\"btn btn-success my-2 my-sm-0\" [routerLink]=\"['/signin']\">Sign In</button>\r\n      </div>\r\n\r\n      <ul class=\"navbar-nav navbar-right\" *ngIf=\"auth.isAuthenticated()\">\r\n        <li class=\"nav-item dropdown\" >\r\n            <a class=\"nav-link dropdown-toggle\" href=\"just to make the mouse to become a hand\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              {{username}}\r\n            </a>\r\n            <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdown\">\r\n              <a class=\"dropdown-item\" [routerLink]=\"['/profile']\" >Profile</a>\r\n              <a class=\"dropdown-item\" [routerLink]=\"['/history']\" >My Events</a>\r\n              <div class=\"dropdown-divider\"></div>\r\n              <a class=\"dropdown-item\" href=\"#\" (click)=\"logout()\" >Log Out</a>\r\n            </div>\r\n          </li>\r\n      </ul>\r\n\r\n    </div>\r\n  <!-- </div> -->\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -632,7 +650,7 @@ var NavBarComponent = /** @class */ (function () {
     function NavBarComponent(auth) {
         this.auth = auth;
         this.username = "";
-        this.auth.handleAuthentication();
+        //this.auth.handleAuthentication();
     }
     // constructor(@Inject("auth") private auth,
     //             @Inject("keywords") private keywords,
@@ -646,12 +664,6 @@ var NavBarComponent = /** @class */ (function () {
     };
     // //d = new Date();
     NavBarComponent.prototype.ngOnInit = function () { };
-    NavBarComponent.prototype.login = function () {
-        this.auth.login();
-    };
-    NavBarComponent.prototype.logout = function () {
-        this.auth.logout();
-    };
     NavBarComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-nav-bar',
@@ -686,7 +698,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <form #formRef=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"eventName\">Event Name</label>\n      <input tpye=\"text\" class=\"form-control\" id=\"eventName\"\n             name=\"eventName\" required placeholder=\"事件名称\" [(ngModel)]=\"newEvent.name\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"eventTime\">Event Time</label>\n      <input tpye=\"text\" class=\"form-control\" id=\"eventTime\"\n             name=\"eventTime\" required placeholder=\"时间\" [(ngModel)]=\"newEvent.time\">\n    </div>\n\n    <div class=\"form-group\">\n      <label for=\"eventImgUrl\">Event Image Url</label>\n      <input tpye=\"text\" class=\"form-control\" id=\"eventImgUrl\"\n             name=\"eventImgUrl\" required placeholder=\"image Url\" [(ngModel)]=\"newEvent.imageUrl\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"eventDesc\">Event Description</label>\n      <textarea tpye=\"text\" row=\"3\" class=\"form-control\" id=\"eventDesc\"\n                name=\"eventDesc\" required placeholder=\"事件描述\" [(ngModel)]=\"newEvent.description\">\n      </textarea>\n    </div>\n\n    <div class=\"row\">\n      <div class=\"col-md-12\">Event Name</div>\n      <button type=\"submit\" class=\"btn btn-primary pull-right\" (click)=\"addEvent()\"> add Event</button>\n    </div>\n\n  </form>\n</div>\n"
+module.exports = "<div>\r\n  <form #formRef=\"ngForm\">\r\n    <div class=\"form-group\">\r\n      <label for=\"eventName\">Event Name</label>\r\n      <input tpye=\"text\" class=\"form-control\" id=\"eventName\"\r\n             name=\"eventName\" required placeholder=\"事件名称\" [(ngModel)]=\"newEvent.name\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"eventTime\">Event Time</label>\r\n      <input tpye=\"text\" class=\"form-control\" id=\"eventTime\"\r\n             name=\"eventTime\" required placeholder=\"时间\" [(ngModel)]=\"newEvent.time\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n      <label for=\"eventImgUrl\">Event Image Url</label>\r\n      <input tpye=\"text\" class=\"form-control\" id=\"eventImgUrl\"\r\n             name=\"eventImgUrl\" required placeholder=\"image Url\" [(ngModel)]=\"newEvent.imageUrl\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"eventDesc\">Event Description</label>\r\n      <textarea tpye=\"text\" row=\"3\" class=\"form-control\" id=\"eventDesc\"\r\n                name=\"eventDesc\" required placeholder=\"事件描述\" [(ngModel)]=\"newEvent.description\">\r\n      </textarea>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12\">Event Name</div>\r\n      <button type=\"submit\" class=\"btn btn-primary pull-right\" (click)=\"addEvent()\"> add Event</button>\r\n    </div>\r\n\r\n  </form>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -751,6 +763,148 @@ var NewEventComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/sign-in/sign-in.component.css":
+/*!**********************************************************!*\
+  !*** ./src/app/components/sign-in/sign-in.component.css ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".login-card{\r\n    max-width: 400px;\r\n}"
+
+/***/ }),
+
+/***/ "./src/app/components/sign-in/sign-in.component.html":
+/*!***********************************************************!*\
+  !*** ./src/app/components/sign-in/sign-in.component.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row login-card mx-auto\">\r\n  <p class=\"h3 mx-auto mt-5\">\r\n    WeJoy\r\n  </p>\r\n  <div class=\"mx-auto col-12\">\r\n    <div class=\"form-group my-4\">\r\n      <input type=\"email\" class=\"form-control\" id=\"singInEmail\" name=\"singInEmail\" placeholder=\"E-mail\" [(ngModel)]=\"email\">\r\n    </div>\r\n    <div class=\"form-group my-4\">\r\n      <input type=\"password\" class=\"form-control\" id=\"singInPass\" name=\"singInPass\" placeholder=\"Password\" [(ngModel)]=\"password\">\r\n    </div>\r\n    <div class=\"row d-flex justify-content-between my-4\">\r\n      <div class=\"col-6\">\r\n        <button type=\"button\" class=\"btn btn-primary btn-block\" (click)=\"login()\">Log In</button>\r\n      </div>\r\n      <div class=\"col-6\">\r\n        <button type=\"button\" class=\"btn btn-outline-secondary btn-block\" [routerLink]=\"['/signup']\">Sign Up</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/sign-in/sign-in.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/components/sign-in/sign-in.component.ts ***!
+  \*********************************************************/
+/*! exports provided: SignInComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignInComponent", function() { return SignInComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SignInComponent = /** @class */ (function () {
+    function SignInComponent() {
+    }
+    SignInComponent.prototype.ngOnInit = function () {
+    };
+    SignInComponent.prototype.login = function () {
+        console.log(this.email);
+        console.log(this.password);
+    };
+    SignInComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-sign-in',
+            template: __webpack_require__(/*! ./sign-in.component.html */ "./src/app/components/sign-in/sign-in.component.html"),
+            styles: [__webpack_require__(/*! ./sign-in.component.css */ "./src/app/components/sign-in/sign-in.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SignInComponent);
+    return SignInComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/sign-up/sign-up.component.css":
+/*!**********************************************************!*\
+  !*** ./src/app/components/sign-up/sign-up.component.css ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".signup-card{\r\n    max-width: 400px;\r\n}"
+
+/***/ }),
+
+/***/ "./src/app/components/sign-up/sign-up.component.html":
+/*!***********************************************************!*\
+  !*** ./src/app/components/sign-up/sign-up.component.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row signup-card mx-auto\">\r\n    <p class=\"h3 mx-auto mt-5\">\r\n      Be One of WeJoy\r\n    </p>\r\n    <div class=\"mx-auto col-12\">\r\n      <div class=\"form-group my-4\">\r\n        <input type=\"email\" class=\"form-control\" id=\"singUpEmail\" placeholder=\"E-mail\" [(ngModel)]=\"email\">\r\n      </div>\r\n      <div class=\"form-group my-4\">\r\n        <input type=\"username\" class=\"form-control\" id=\"signUpName\" placeholder=\"Username\" [(ngModel)]=\"username\">\r\n      </div>\r\n      <div class=\"form-group my-4\">\r\n        <input type=\"password\" class=\"form-control\" id=\"singUpPass\" placeholder=\"Password\" [(ngModel)]=\"password\">\r\n      </div>\r\n      <div class=\"form-group my-4\">\r\n        <input type=\"password\" class=\"form-control\" id=\"singUpPass_\" placeholder=\"Confirm Password\" [(ngModel)]=\"password_\">\r\n      </div>\r\n      <div class=\"form-group form-check\">\r\n        <input type=\"checkbox\" class=\"form-check-input\" id=\"signupAgree\" [(ngModel)]=\"agree\">\r\n        <label class=\"form-check-label\" for=\"signupAgree\" >I'm agree on ...</label>\r\n      </div>\r\n      <div class=\"form-group my-4\">\r\n          <button type=\"button\" class=\"btn btn-primary btn-block\" (click)=\"signup()\">Sign Up</button>\r\n      </div>\r\n    </div>\r\n  </div>"
+
+/***/ }),
+
+/***/ "./src/app/components/sign-up/sign-up.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/components/sign-up/sign-up.component.ts ***!
+  \*********************************************************/
+/*! exports provided: SignUpComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignUpComponent", function() { return SignUpComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SignUpComponent = /** @class */ (function () {
+    function SignUpComponent() {
+        this.email = "";
+        this.username = "";
+        this.password = "";
+        this.password_ = "";
+        this.agree = false;
+    }
+    SignUpComponent.prototype.ngOnInit = function () {
+    };
+    SignUpComponent.prototype.signup = function () {
+        console.log(this.email);
+        console.log(this.username);
+        console.log(this.password);
+        console.log(this.password_);
+        console.log(this.agree);
+    };
+    SignUpComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-sign-up',
+            template: __webpack_require__(/*! ./sign-up.component.html */ "./src/app/components/sign-up/sign-up.component.html"),
+            styles: [__webpack_require__(/*! ./sign-up.component.css */ "./src/app/components/sign-up/sign-up.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SignUpComponent);
+    return SignUpComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/user-history/user-history.component.css":
 /*!********************************************************************!*\
   !*** ./src/app/components/user-history/user-history.component.css ***!
@@ -769,7 +923,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  user-history works!\n</p>\n"
+module.exports = "<p>\r\n  user-history works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -832,7 +986,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container my-4\">\n  <ul class=\"nav nav-tabs\" id=\"myTab\" role=\"tablist\">\n    <li class=\"nav-item\">\n      <a class=\"nav-link active\" id=\"profile-tab\" data-toggle=\"tab\" href=\"#profile\" role=\"tab\" aria-controls=\"profile\" aria-selected=\"true\">Profile</a>\n    </li>\n    <li class=\"nav-item\">\n      <a class=\"nav-link\" id=\"set-tab\" data-toggle=\"tab\" href=\"#set\" role=\"tab\" aria-controls=\"set\" aria-selected=\"false\">Settings</a>\n    </li>\n    <!-- <li class=\"nav-item\">\n      <a class=\"nav-link\" id=\"contact-tab\" data-toggle=\"tab\" href=\"#contact\" role=\"tab\" aria-controls=\"contact\" aria-selected=\"false\">Contact</a>\n    </li> -->\n  </ul>\n  <div class=\"tab-content\" id=\"myTabContent\">\n    <div class=\"tab-pane fade show active mx-auto col-sm-12 col-md-10\" id=\"profile\" role=\"tabpanel\" aria-labelledby=\"profile-tab\">\n      <ul class=\"list-group list-group-flush \">\n        <li class=\"list-group-item mt-4\">\n          <div class=\"row\">\n            <div class=\"col-sm-12 col-md-3\">E-mail:</div>\n            <div class=\"mx-auto\">{{email}}</div>\n          </div>\n        </li>\n        <li class=\"list-group-item\">\n          <div class=\"row\">\n            <div class=\"col-sm-12 col-md-3\">User name:</div>\n            <div class=\"mx-auto\">{{username}}</div>\n          </div>\n        </li>\n        <!-- <li class=\"list-group-item\">Morbi leo risus</li>\n        <li class=\"list-group-item\">Porta ac consectetur ac</li>\n        <li class=\"list-group-item\">Vestibulum at eros</li> -->\n      </ul>\n    </div>\n    <div class=\"tab-pane fade\" id=\"set\" role=\"tabpanel\" aria-labelledby=\"set-tab\">\n      <div class=\"form-inline my-2 mr-2 my-lg-0\" >\n        <button class=\"btn btn-success mx-auto my-4\" (click)=\"changePass()\">Change Password</button>\n      </div>\n      <div class=\"row\">\n        <div class=\"mx-auto\">{{message}}</div>\n      </div>\n    </div>\n    <!-- <div class=\"tab-pane fade\" id=\"contact\" role=\"tabpanel\" aria-labelledby=\"contact-tab\">...</div> -->\n  </div>\n</div>"
+module.exports = "<div class=\"container my-4\">\r\n  <ul class=\"nav nav-tabs\" id=\"myTab\" role=\"tablist\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link active\" id=\"profile-tab\" data-toggle=\"tab\" href=\"#profile\" role=\"tab\" aria-controls=\"profile\" aria-selected=\"true\">Profile</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" id=\"set-tab\" data-toggle=\"tab\" href=\"#set\" role=\"tab\" aria-controls=\"set\" aria-selected=\"false\">Settings</a>\r\n    </li>\r\n    <!-- <li class=\"nav-item\">\r\n      <a class=\"nav-link\" id=\"contact-tab\" data-toggle=\"tab\" href=\"#contact\" role=\"tab\" aria-controls=\"contact\" aria-selected=\"false\">Contact</a>\r\n    </li> -->\r\n  </ul>\r\n  <div class=\"tab-content\" id=\"myTabContent\">\r\n    <div class=\"tab-pane fade show active mx-auto col-sm-12 col-md-10\" id=\"profile\" role=\"tabpanel\" aria-labelledby=\"profile-tab\">\r\n      <ul class=\"list-group list-group-flush \">\r\n        <li class=\"list-group-item mt-4\">\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-12 col-md-3\">E-mail:</div>\r\n            <div class=\"mx-auto\">{{email}}</div>\r\n          </div>\r\n        </li>\r\n        <li class=\"list-group-item\">\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-12 col-md-3\">User name:</div>\r\n            <div class=\"mx-auto\">{{username}}</div>\r\n          </div>\r\n        </li>\r\n        <!-- <li class=\"list-group-item\">Morbi leo risus</li>\r\n        <li class=\"list-group-item\">Porta ac consectetur ac</li>\r\n        <li class=\"list-group-item\">Vestibulum at eros</li> -->\r\n      </ul>\r\n    </div>\r\n    <div class=\"tab-pane fade\" id=\"set\" role=\"tabpanel\" aria-labelledby=\"set-tab\">\r\n      <div class=\"form-inline my-2 mr-2 my-lg-0\" >\r\n        <button class=\"btn btn-success mx-auto my-4\" (click)=\"changePass()\">Change Password</button>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"mx-auto\">{{message}}</div>\r\n      </div>\r\n    </div>\r\n    <!-- <div class=\"tab-pane fade\" id=\"contact\" role=\"tabpanel\" aria-labelledby=\"contact-tab\">...</div> -->\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -919,9 +1073,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return AuthService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var auth0_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! auth0-js */ "./node_modules/auth0-js/src/index.js");
-/* harmony import */ var auth0_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(auth0_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 // src/app/auth/auth.service.ts
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -935,116 +1087,34 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 // import {tokenNotExpired} from "angular2-jwt";
 window.global = window;
 var AuthService = /** @class */ (function () {
     function AuthService(router, http) {
         this.router = router;
         this.http = http;
-        this.auth0 = new auth0_js__WEBPACK_IMPORTED_MODULE_2__["WebAuth"]({
-            clientID: 'SQqTnHXz9lyqAWKdJgO00BJBhbj8OGnG',
-            domain: 'wenbosong.auth0.com',
-            responseType: 'token id_token',
-            audience: 'https://wenbosong.auth0.com/userinfo',
-            redirectUri: 'http://localhost:3000/callback',
-            scope: 'openid profile'
-        });
     }
-    // public login(){
-    //   console.log("try");
-    //   this.auth0.authorize();
-    // }
-    AuthService.prototype.login = function () {
-        var _this = this;
-        return new Promise(function (resolve, reject) {
-            _this.auth0.authorize(function () {
-                //console.log("1");
-                //this.handleAuthentication();
-                _this.getProfile(function (err, profile) {
-                    //console.log("2");
-                    localStorage.setItem("profile", JSON.stringify(profile));
-                    resolve();
-                });
-            });
-        });
-    };
-    AuthService.prototype.handleAuthentication = function () {
-        var _this = this;
-        this.auth0.parseHash(function (err, authResult) {
-            if (authResult && authResult.accessToken && authResult.idToken) {
-                _this.setSession(authResult);
-                _this.router.navigate(['/home']);
-            }
-            else if (err) {
-                _this.router.navigate(['/home']);
-                console.log(err);
-                alert("Error: " + err.error + ". Check the console for further details.");
-            }
-        });
-    };
-    AuthService.prototype.setSession = function (authResult) {
-        // Set the time that the access token will expire at
-        var expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime());
-        localStorage.setItem('access_token', authResult.accessToken);
-        localStorage.setItem('id_token', authResult.idToken);
-        localStorage.setItem('expires_at', expiresAt);
-        this.getProfile(function (err, profile) {
-            localStorage.setItem("profile", JSON.stringify(profile));
-            //this.username = profile.nickname;
-            //console.log(this.logged);
-            //console.log(this.username);
-        });
-    };
-    AuthService.prototype.logout = function () {
-        // Remove tokens and expiry time from localStorage
-        console.log("try out");
-        localStorage.removeItem('access_token');
-        localStorage.removeItem('id_token');
-        localStorage.removeItem('expires_at');
-        localStorage.removeItem('profile');
-        // Go back to the home route
-        //this.router.navigate(['/']);
+    // ------------------ own authori ------------------
+    AuthService.prototype.setUser = function (token, profile) {
+        localStorage.setItem("profile", profile);
+        localStorage.setItem("token", token);
     };
     AuthService.prototype.isAuthenticated = function () {
-        var expiresAt = JSON.parse(localStorage.getItem('expires_at') || '{}');
-        return new Date().getTime() < expiresAt;
+        return localStorage.getItem('token') != null;
     };
-    AuthService.prototype.getProfile = function (cb) {
-        var accessToken = localStorage.getItem('access_token');
-        if (!accessToken) {
-            throw new Error('Access token must exist to fetch profile');
-        }
-        var self = this;
-        this.auth0.client.userInfo(accessToken, function (err, profile) {
-            if (profile) {
-                self.userProfile = profile;
-            }
-            cb(err, profile);
-        });
+    AuthService.prototype.removeUser = function () {
+        localStorage.removeItem('token');
+        localStorage.removeItem('profile');
     };
-    AuthService.prototype.changePass = function () {
-        console.log("change");
-        var httpOptions = {
-            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]({
-                'Content-Type': 'application/json'
-            })
-        };
-        var profile = {
-            client_id: "O228e5ilo3JZXHQKSfYRmi6VvwQXCsC9",
-            email: JSON.parse(localStorage.getItem("profile")).name,
-            connection: "Username-Password-Authentication"
-        };
-        console.log(profile);
-        // return this.http.post('api/v1/files', file, httpOptions).toPromise().then((res: Response) => {
-        //   this.getFiles();
-        //   return res.json();
-        // }).catch(this.handleError);
-        return this.http.post('https://zksun.auth0.com/dbconnections/change_password', profile, httpOptions);
+    AuthService.prototype.getToken = function () {
+        return localStorage.getItem('token');
+    };
+    AuthService.prototype.getProfile = function () {
+        return localStorage.getItem('profile');
     };
     AuthService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], AuthService);
     return AuthService;
 }());
@@ -1233,7 +1303,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/wenbo/Documents/WeJoy/WeJoy/wejoy/client/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\zzhic\Desktop\Project\WeJoy\wejoy\client\src\main.ts */"./src/main.ts");
 
 
 /***/ })

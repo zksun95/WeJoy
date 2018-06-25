@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { routing } from './app.routes';
 import { HttpModule } from '@angular/http';
@@ -20,7 +21,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { NewEventComponent } from './components/new-event/new-event.component';
 import {importType} from "@angular/compiler/src/output/output_ast";
 
-import { FormsModule } from "@angular/forms";
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { FormsModule } from "@angular/forms";
     UserHistoryComponent,
     HomePageComponent,
     NewEventComponent,
+    SignInComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

@@ -22,7 +22,7 @@ export class NavBarComponent implements OnInit {
 
   // searchBox: FormControl = new FormControl();
   constructor(@Inject("auth") private auth){
-    this.auth.handleAuthentication();
+    //this.auth.handleAuthentication();
   }
   // constructor(@Inject("auth") private auth,
   //             @Inject("keywords") private keywords,
@@ -39,15 +39,15 @@ export class NavBarComponent implements OnInit {
   // //d = new Date();
   ngOnInit(){}
 
-  login(): void{
-    this.auth.login();
-  }
+  // login(): void{
+  //   this.auth.login();
+  // }
 
 
 
-  logout(): void{
-    this.auth.logout();
-  }
+  // logout(): void{
+  //   this.auth.logout();
+  // }
   // ngOnInit() {
   //   this.sub = this.searchBox
   //                   .valueChanges
