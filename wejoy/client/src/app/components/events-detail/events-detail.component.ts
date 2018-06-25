@@ -20,7 +20,7 @@ export class EventsDetailComponent implements OnInit {
     this.route.params.subscribe(params =>{
       console.log(params);
       //this.event = this.events[+params["id"]-1];
-      this.getEvents.getEventInfo(+params["id"]-1)
+      this.getEvents.getEventInfo(+params["id"])
                     .subscribe((event)=>{
                       this.event = event
                     });

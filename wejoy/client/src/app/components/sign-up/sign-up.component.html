@@ -1,0 +1,26 @@
+<div class="row signup-card mx-auto">
+    <p class="h3 mx-auto mt-5">
+      Be One of WeJoy
+    </p>
+    <div class="mx-auto col-12">
+      <div class="form-group my-4">
+        <input type="email" class="form-control" id="singUpEmail" placeholder="E-mail" [(ngModel)]="email">
+      </div>
+      <div class="form-group my-4">
+        <input type="username" class="form-control" id="signUpName" placeholder="Username" [(ngModel)]="username">
+      </div>
+      <div class="form-group my-4">
+        <input type="password" class="form-control" id="singUpPass" placeholder="Password" [(ngModel)]="password">
+      </div>
+      <div class="form-group my-4">
+        <input type="password" class="form-control" id="singUpPass_" placeholder="Confirm Password" [(ngModel)]="password_">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="signupAgree" [(ngModel)]="agree">
+        <label class="form-check-label" for="signupAgree" >I'm agree on ...</label>
+      </div>
+      <div class="form-group my-4">
+          <button type="button" class="btn btn-primary btn-block" (click)="signup()">Sign Up</button>
+      </div>
+    </div>
+  </div>

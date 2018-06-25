@@ -29,14 +29,22 @@ export class EventsDisplayComponent implements OnInit {
                   .pipe(debounceTime(500))
                   .subscribe((res)=>{
                     console.log("loading!");
-                    this.events=this.events.concat(this.getEvents.loadMoreEvents_());
-                    this.loading = false;
+                    //this.events=this.events.concat(this.getEvents.loadMoreEvents_());
+                    //this.loading = false;
+                    this.loadMoreEvents();
                   });
   }
 
   loadMoreEvents(): void{
-    this.events=this.events.concat(this.getEvents.loadMoreEvents_());
-    this.loading = false;
+    this.getEvents.loadMoreEvents()
+                  .subscribe(
+                    (events)=>{
+                      this.events=this.events.concat(events);
+                      this.loading = false;
+                    }
+                  );
+    //this.events=this.events.concat(this.getEvents.loadMoreEvents_());
+    //this.loading = false;
   }
 
   @HostListener('window:scroll', ['$event'])
