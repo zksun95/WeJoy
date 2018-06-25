@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { routing } from './app.routes';
 import { HttpModule } from '@angular/http';
@@ -16,6 +17,8 @@ import { GetEventsService } from './services/get-events.service';
 import { AuthService } from './services/auth.service';
 import { UserHistoryComponent } from './components/user-history/user-history.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +29,16 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     EventsDetailComponent,
     UserProfileComponent,
     UserHistoryComponent,
-    HomePageComponent
+    HomePageComponent,
+    SignInComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
     routing,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     {

@@ -24,7 +24,7 @@
       </div>
 
       <div class="form-inline my-2 mr-2 my-lg-0" *ngIf="!auth.isAuthenticated()">
-        <button class="btn btn-success my-2 my-sm-0" (click)="login()">Sign In</button>
+        <button class="btn btn-success my-2 my-sm-0" [routerLink]="['/signin']">Sign In</button>
       </div>
 
       <ul class="navbar-nav navbar-right" *ngIf="auth.isAuthenticated()">
