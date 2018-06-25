@@ -1,5 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import { Event } from "../../type/event";
+import { Router } from '@angular/router';
 
 const DEFAULT_EVENT: Event = Object.freeze({
   id: 0,
@@ -18,9 +19,14 @@ const DEFAULT_EVENT: Event = Object.freeze({
 export class NewEventComponent implements OnInit {
 
   newEvent: Event = Object.assign({}, DEFAULT_EVENT);
-  constructor(@Inject("get_events") private getEvent) { }
+  constructor(@Inject("get_events") private getEvent,
+              @Inject("auth") private auth,
+              private router: Router) { }
 
   ngOnInit() {
+    if(!this.auth.canCreateEvent()){
+      this.router.navigate(['/home']);
+    }
   }
 
   addEvent(): void {

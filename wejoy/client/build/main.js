@@ -616,7 +616,7 @@ module.exports = ".nav-go-right{\r\n    position: absolute;\r\n    right: 0px\r\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light sticky-top px-3 pt-3 pb-2\" style=\"background-color: #e3f2fd;\">\r\n  <!-- <div class=\"container\"> -->\r\n    <a class=\"navbar-brand\" href=\"#\">WeJoy</a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarTogglerDemo\" aria-controls=\"navbarTogglerDemo\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarTogglerDemo\">\r\n      <ul class=\"navbar-nav mr-2 mt-2 mt-lg-0\">\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [routerLink]=\"['/events']\" >Events</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [routerLink]=\"['/new-event']\">Create</a>\r\n        </li>\r\n      </ul>\r\n\r\n      <div class=\"form-inline my-2 mr-auto my-lg-0\">\r\n        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\">\r\n        <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n      </div>\r\n\r\n      <div class=\"form-inline my-2 mr-2 my-lg-0\" *ngIf=\"!auth.isAuthenticated()\">\r\n        <button class=\"btn btn-success my-2 my-sm-0\" [routerLink]=\"['/signin']\">Sign In</button>\r\n      </div>\r\n\r\n      <ul class=\"navbar-nav navbar-right\" *ngIf=\"auth.isAuthenticated()\">\r\n        <li class=\"nav-item dropdown\" >\r\n            <a class=\"nav-link dropdown-toggle\" href=\"just to make the mouse to become a hand\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              {{username}}\r\n            </a>\r\n            <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdown\">\r\n              <a class=\"dropdown-item\" [routerLink]=\"['/profile']\" >Profile</a>\r\n              <a class=\"dropdown-item\" [routerLink]=\"['/history']\" >My Events</a>\r\n              <div class=\"dropdown-divider\"></div>\r\n              <a class=\"dropdown-item\" href=\"#\" (click)=\"logout()\" >Log Out</a>\r\n            </div>\r\n          </li>\r\n      </ul>\r\n\r\n    </div>\r\n  <!-- </div> -->\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light sticky-top px-3 pt-3 pb-2\" style=\"background-color: #e3f2fd;\">\r\n  <!-- <div class=\"container\"> -->\r\n    <a class=\"navbar-brand\" href=\"#\">WeJoy</a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarTogglerDemo\" aria-controls=\"navbarTogglerDemo\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarTogglerDemo\">\r\n      <ul class=\"navbar-nav mr-2 mt-2 mt-lg-0\">\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [routerLink]=\"['/events']\" >Events</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [routerLink]=\"['/new-event']\" *ngIf=\"auth.isAuthenticated()\">Create</a>\r\n        </li>\r\n      </ul>\r\n\r\n      <div class=\"form-inline my-2 mr-auto my-lg-0\">\r\n        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\">\r\n        <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n      </div>\r\n\r\n      <div class=\"form-inline my-2 mr-2 my-lg-0\" *ngIf=\"!auth.isAuthenticated()\">\r\n        <button class=\"btn btn-success my-2 my-sm-0\" [routerLink]=\"['/signin']\">Sign In</button>\r\n      </div>\r\n\r\n      <ul class=\"navbar-nav navbar-right\" *ngIf=\"auth.isAuthenticated()\">\r\n        <li class=\"nav-item dropdown\" >\r\n            <a class=\"nav-link dropdown-toggle\" href=\"just to make the mouse to become a hand\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n              {{username}}\r\n            </a>\r\n            <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdown\">\r\n              <a class=\"dropdown-item\" [routerLink]=\"['/profile']\" >Profile</a>\r\n              <a class=\"dropdown-item\" [routerLink]=\"['/history']\" >My Events</a>\r\n              <div class=\"dropdown-divider\"></div>\r\n              <a class=\"dropdown-item\" href=\"#\" (click)=\"logout()\" >Log Out</a>\r\n            </div>\r\n          </li>\r\n      </ul>\r\n\r\n    </div>\r\n  <!-- </div> -->\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -716,6 +716,7 @@ module.exports = "<div>\r\n  <form #formRef=\"ngForm\">\r\n    <div class=\"form
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewEventComponent", function() { return NewEventComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -729,6 +730,7 @@ var __param = (undefined && undefined.__param) || function (paramIndex, decorato
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 
+
 var DEFAULT_EVENT = Object.freeze({
     id: 0,
     name: "",
@@ -739,11 +741,16 @@ var DEFAULT_EVENT = Object.freeze({
     imageUrl: ""
 });
 var NewEventComponent = /** @class */ (function () {
-    function NewEventComponent(getEvent) {
+    function NewEventComponent(getEvent, auth, router) {
         this.getEvent = getEvent;
+        this.auth = auth;
+        this.router = router;
         this.newEvent = Object.assign({}, DEFAULT_EVENT);
     }
     NewEventComponent.prototype.ngOnInit = function () {
+        if (!this.auth.canCreateEvent()) {
+            this.router.navigate(['/home']);
+        }
     };
     NewEventComponent.prototype.addEvent = function () {
         this.getEvent.addEvent(this.newEvent)
@@ -757,7 +764,8 @@ var NewEventComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./new-event.component.css */ "./src/app/components/new-event/new-event.component.css")]
         }),
         __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])("get_events")),
-        __metadata("design:paramtypes", [Object])
+        __param(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])("auth")),
+        __metadata("design:paramtypes", [Object, Object, _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], NewEventComponent);
     return NewEventComponent;
 }());
@@ -1067,9 +1075,13 @@ var UserProfileComponent = /** @class */ (function () {
         this.message = "";
     }
     UserProfileComponent.prototype.ngOnInit = function () {
-        //if(this.auth.isAuthenticated()){
-        this.username = JSON.parse(localStorage.getItem("profile")).nickname;
-        this.email = JSON.parse(localStorage.getItem("profile")).name;
+        if (this.auth.isAuthenticated()) {
+            this.username = JSON.parse(localStorage.getItem("profile")).username;
+            this.email = JSON.parse(localStorage.getItem("profile")).email;
+        }
+        else {
+            this.router.navigate(['/signin']);
+        }
         //this.auth.getMoreProfile();
         // }else{
         //   //this.router.navigate(['/files']);
@@ -1144,6 +1156,10 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.isAuthenticated = function () {
         return localStorage.getItem('token') != null;
     };
+    // TODO !
+    AuthService.prototype.canCreateEvent = function () {
+        return localStorage.getItem('token') != null;
+    };
     AuthService.prototype.removeUser = function () {
         localStorage.removeItem('token');
         localStorage.removeItem('profile');
@@ -1160,10 +1176,6 @@ var AuthService = /** @class */ (function () {
                 'Content-Type': 'application/json'
             })
         };
-        // return this.http.post('api/v1/files', file, httpOptions).toPromise().then((res: Response) => {
-        //   this.getFiles();
-        //   return res.json();
-        // }).catch(this.handleError);
         return this.http.post('auth/signup', data, httpOptions);
     };
     AuthService.prototype.login = function (data) {
@@ -1209,6 +1221,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (undefined && undefined.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
 };
 
 
@@ -1262,8 +1277,9 @@ var GetEventsService = /** @class */ (function () {
     //       imageUrl:"https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F44550934%2F24250841862%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C68%2C700%2C350&s=9b2728adc37ebc30ff35e478c0bfc34d"
     //     }
     // ];
-    function GetEventsService(http) {
+    function GetEventsService(http, auth) {
         this.http = http;
+        this.auth = auth;
     }
     GetEventsService.prototype.handleError = function (error) {
         console.error('An error occurred', error); // for demo purposes only
@@ -1272,6 +1288,15 @@ var GetEventsService = /** @class */ (function () {
     GetEventsService.prototype.loadMoreEvents = function () {
         //return this.fake_events;
         return this.http.get("api/v1/events");
+    };
+    // authed !
+    GetEventsService.prototype.loginOnly_loadMoreEvents = function () {
+        var httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                'authorization': 'bearer ' + this.auth.getToken(),
+            })
+        };
+        return this.http.get('api/v1/events', httpOptions);
     };
     GetEventsService.prototype.loadEventsHome = function () {
         //return this.fake_events;
@@ -1300,7 +1325,8 @@ var GetEventsService = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+        __param(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])('auth')),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], Object])
     ], GetEventsService);
     return GetEventsService;
 }());

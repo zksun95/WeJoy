@@ -37,6 +37,11 @@ export class AuthService {
     return localStorage.getItem('token')!=null;
   }
 
+  // TODO !
+  public canCreateEvent(){
+    return localStorage.getItem('token')!=null;
+  }
+
   public removeUser(){
     localStorage.removeItem('token');
     localStorage.removeItem('profile');
@@ -57,11 +62,7 @@ export class AuthService {
       })
     };
 
-    // return this.http.post('api/v1/files', file, httpOptions).toPromise().then((res: Response) => {
-    //   this.getFiles();
-    //   return res.json();
-    // }).catch(this.handleError);
-    return this.http.post<File>('auth/signup', data, httpOptions);
+    return this.http.post('auth/signup', data, httpOptions);
   }
 
   public login(data): Observable<any>{
@@ -70,7 +71,7 @@ export class AuthService {
         'Content-Type':  'application/json'
       })
     };
-    return this.http.post<File>('auth/login', data, httpOptions);
+    return this.http.post('auth/login', data, httpOptions);
   }
 
   public logout(){

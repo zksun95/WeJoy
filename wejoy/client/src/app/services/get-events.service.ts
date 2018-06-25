@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Event } from '../type/event';
 import { ObserveOnOperator } from 'rxjs/internal/operators/observeOn';
@@ -81,7 +81,8 @@ export class GetEventsService {
   //     }
   // ];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+              @Inject('auth') private auth) { }
 
 
   private handleError(error: any): Promise<any> {
@@ -90,8 +91,18 @@ export class GetEventsService {
   }
 
   loadMoreEvents(): Observable<Event[]>{
-     //return this.fake_events;
+    //return this.fake_events;
     return this.http.get<Event[]>("api/v1/events");
+  }
+
+  // authed !
+  loginOnly_loadMoreEvents(): Observable<Event[]>{
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'authorization':  'bearer '+this.auth.getToken(),
+      })
+    };
+    return this.http.get<Event[]>('api/v1/events', httpOptions);
   }
 
   loadEventsHome(): Observable<Event[]>{

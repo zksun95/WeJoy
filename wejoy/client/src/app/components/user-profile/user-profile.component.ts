@@ -15,9 +15,13 @@ export class UserProfileComponent implements OnInit {
   constructor(@Inject("auth") private auth, public router: Router) { }
 
   ngOnInit() {
-    //if(this.auth.isAuthenticated()){
-    this.username=JSON.parse(localStorage.getItem("profile")).nickname;
-    this.email=JSON.parse(localStorage.getItem("profile")).name;
+    if(this.auth.isAuthenticated()){
+      this.username=JSON.parse(localStorage.getItem("profile")).username;
+      this.email=JSON.parse(localStorage.getItem("profile")).email;
+    }else{
+      this.router.navigate(['/signin']);
+    }
+    
     //this.auth.getMoreProfile();
     // }else{
     //   //this.router.navigate(['/files']);

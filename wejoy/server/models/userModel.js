@@ -8,6 +8,7 @@ const UserSchema = mongoose.Schema({
     },
     password: String,
     username: String,
+    role: String
 });
 
 UserSchema.methods.comparePass = function comparePass(password, callback){

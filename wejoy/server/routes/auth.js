@@ -17,33 +17,11 @@ router.post('/signup', jsonParser, (req, res, next)=>{
             errors: validationResult.errors
         });
     }
-    console.log(1);
-    // return passport.authenticate('local-signup', (err)=>{
-    //     console.log(err);
-    //     if(err){
-    //         console.log(err);
-    //         if(err.name==='MongoError' && err.code===11000){
-    //             return res.status(409).json({
-    //                 success: false,
-    //                 message: 'check the form',
-    //                 errors: {email: 'Email already used'}
-    //             });
-    //         }
-    //         return res.status(400).json({
-    //             success: false,
-    //             message: 'could not process the form'
-    //         });
-    //     }
-
-    //     return res.status(200).json({
-    //         success: true,
-    //         message: 'Successfully signed up.'
-    //     });
-    // })(req, res, next);
     const userData = {
         email: req.body.email.trim(),
         password: req.body.password.trim(),
-        username: req.body.username.trim()
+        username: req.body.username.trim(),
+        role: "n1"
     };
     const newUser = new User(userData);
     console.log(newUser);
@@ -56,10 +34,6 @@ router.post('/signup', jsonParser, (req, res, next)=>{
             });;
         }
         console.log('saved');
-        // return res.status(200).json({
-        //     success: true,
-        //     message: 'Successfully signed up.'
-        // });
 
         return passport.authenticate('local-login', (err, token, userData)=>{
             if(err){
