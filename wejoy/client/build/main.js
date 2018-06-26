@@ -690,7 +690,7 @@ var NavBarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".create-event{\r\n    max-width: 700px;\r\n}"
 
 /***/ }),
 
@@ -701,7 +701,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <form #formRef=\"ngForm\">\r\n    <div class=\"form-group\">\r\n      <label for=\"eventName\">Event Name</label>\r\n      <input tpye=\"text\" class=\"form-control\" id=\"eventName\"\r\n             name=\"eventName\" required placeholder=\"事件名称\" [(ngModel)]=\"newEvent.name\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"eventTime\">Event Time</label>\r\n      <input tpye=\"text\" class=\"form-control\" id=\"eventTime\"\r\n             name=\"eventTime\" required placeholder=\"时间\" [(ngModel)]=\"newEvent.time\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n      <label for=\"eventImgUrl\">Event Image Url</label>\r\n      <input tpye=\"text\" class=\"form-control\" id=\"eventImgUrl\"\r\n             name=\"eventImgUrl\" required placeholder=\"image Url\" [(ngModel)]=\"newEvent.imageUrl\">\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"eventDesc\">Event Description</label>\r\n      <textarea tpye=\"text\" row=\"3\" class=\"form-control\" id=\"eventDesc\"\r\n                name=\"eventDesc\" required placeholder=\"事件描述\" [(ngModel)]=\"newEvent.description\">\r\n      </textarea>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12\">Event Name</div>\r\n      <button type=\"submit\" class=\"btn btn-primary pull-right\" (click)=\"addEvent()\"> add Event</button>\r\n    </div>\r\n\r\n  </form>\r\n</div>\r\n"
+module.exports = "<div class=\"col-12\">\r\n  <div class=\"create-event mx-auto my-5 mx-4\">\r\n    <form #formRef=\"ngForm\">\r\n      <div class=\"form-group\">\r\n        <label for=\"eventName\">Event Name</label>\r\n        <input tpye=\"text\" class=\"form-control\" id=\"eventName\"\r\n              name=\"eventName\" required placeholder=\"事件名称\" [(ngModel)]=\"newEvent.name\">\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label for=\"eventTime\">Event Time</label>\r\n        <input tpye=\"text\" class=\"form-control\" id=\"eventTime\"\r\n              name=\"eventTime\" required placeholder=\"时间\" [(ngModel)]=\"newEvent.time\">\r\n      </div>\r\n\r\n      <div class=\"form-group\">\r\n        <label for=\"eventImgUrl\">Event Image Url</label>\r\n        <input tpye=\"text\" class=\"form-control\" id=\"eventImgUrl\"\r\n              name=\"eventImgUrl\" required placeholder=\"image Url\" [(ngModel)]=\"newEvent.imageUrl\">\r\n      </div>\r\n      <div class=\"form-group\">\r\n        <label for=\"eventDesc\">Event Description</label>\r\n        <textarea tpye=\"text\" row=\"3\" class=\"form-control\" id=\"eventDesc\"\r\n                  name=\"eventDesc\" required placeholder=\"事件描述\" [(ngModel)]=\"newEvent.description\">\r\n        </textarea>\r\n      </div>\r\n\r\n      <div class=\"form-group form-check\">\r\n        <input type=\"checkbox\" class=\"form-check-input\" name=\"createAgree\" id=\"createAgree\" [(ngModel)]=\"agree\" >\r\n        <label class=\"form-check-label\" for=\"createAgree\" >I'm agree on ...</label>\r\n      </div>\r\n\r\n      <div class=\"form-group\">\r\n        <button type=\"submit\" class=\"btn btn-primary pull-right\" (click)=\"addEvent()\"> add Event</button>\r\n      </div>\r\n\r\n      <div class=\"form-group\">\r\n        <label class=\"form-check-label\" for=\"createAgree\" >{{error}}</label>\r\n      </div>\r\n\r\n    </form>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -745,6 +745,8 @@ var NewEventComponent = /** @class */ (function () {
         this.getEvent = getEvent;
         this.auth = auth;
         this.router = router;
+        this.agree = false;
+        this.error = "";
         this.newEvent = Object.assign({}, DEFAULT_EVENT);
     }
     NewEventComponent.prototype.ngOnInit = function () {
@@ -752,10 +754,20 @@ var NewEventComponent = /** @class */ (function () {
             this.router.navigate(['/home']);
         }
     };
+    NewEventComponent.prototype.ngAfterContentChecked = function () {
+        if (this.agree) {
+            this.error = "";
+        }
+    };
     NewEventComponent.prototype.addEvent = function () {
-        this.getEvent.addEvent(this.newEvent)
-            .catch(function (error) { return console.log(error.body); });
-        this.newEvent = Object.assign({}, DEFAULT_EVENT);
+        if (this.agree) {
+            this.getEvent.addEvent(this.newEvent)
+                .catch(function (error) { return console.log(error.body); });
+            this.newEvent = Object.assign({}, DEFAULT_EVENT);
+        }
+        else {
+            this.error = "Please read and agree ...";
+        }
     };
     NewEventComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
