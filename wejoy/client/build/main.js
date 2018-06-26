@@ -207,9 +207,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// import { FileCreateComponent } from './others/file-create/file-create.component';
-// import { ProfileComponent } from './others/profile/profile.component';
-//import { UserAccessService } from './services/user-access.service';
 var routes = [
     {
         path: "",
