@@ -8,11 +8,12 @@ var http = require("http");
 var authRouter = require("./routes/auth");
 var restRouter = require('./routes/rest');
 var pageRouter = require("./routes/page");
+var sqlRouter = require("./routes/sql");
 
 var authorization = require("./middleware/auth_checker");
 
-mongoose.connect('mongodb://localhost/wejoy_db');
-//mongoose.connect("mongodb://root:root123@ds117061.mlab.com:17061/wejoy_db");
+//mongoose.connect('mongodb://localhost/wejoy_db');
+mongoose.connect("mongodb://root:root123@ds117061.mlab.com:17061/wejoy_db");
 
 app.use(passport.initialize());
 var localSignUpStrategy = require('./passport/signup');
@@ -21,7 +22,7 @@ passport.use('local-signup', localSignUpStrategy);
 passport.use('local-login', localLogInStrategy);
 
 app.use('/auth', authRouter);
-
+app.use('/sql', sqlRouter);
 app.use('/member/api/v1', authorization);
 app.use('/', pageRouter);
 app.use(express.static(path.join(__dirname, "../client/build/")));

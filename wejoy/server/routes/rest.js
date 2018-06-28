@@ -3,7 +3,7 @@ var router = express.Router();
 var eventService = require("../services/eventService");
 var bodyParser = require("body-parser");
 var jsonParser = bodyParser.json();
-
+var sqlService = require("../services/sqlService");
 
 router.get("/events", function (req, res){
     eventService.getEvents()
