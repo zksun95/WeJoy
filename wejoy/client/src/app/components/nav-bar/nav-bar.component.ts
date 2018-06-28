@@ -32,12 +32,16 @@ export class NavBarComponent implements OnInit {
 
   ngAfterContentChecked(){
     if(localStorage.getItem('profile')){
-      this.username = JSON.parse(localStorage.getItem('profile')).nickname;
+      this.username = JSON.parse(localStorage.getItem('profile')).username;
     }
   }
 
   // //d = new Date();
   ngOnInit(){}
+
+  logout(){
+    this.auth.logout();
+  }
 
   // login(): void{
   //   this.auth.login();

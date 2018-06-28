@@ -37,6 +37,11 @@ export class AuthService {
     return localStorage.getItem('token')!=null;
   }
 
+  // TODO !
+  public canCreateEvent(){
+    return localStorage.getItem('token')!=null;
+  }
+
   public removeUser(){
     localStorage.removeItem('token');
     localStorage.removeItem('profile');
@@ -48,6 +53,30 @@ export class AuthService {
 
   public getProfile(){
     return localStorage.getItem('profile');
+  }
+
+  public signup(data): Observable<any>{
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      })
+    };
+
+    return this.http.post('auth/signup', data, httpOptions);
+  }
+
+  public login(data): Observable<any>{
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      })
+    };
+    return this.http.post('auth/login', data, httpOptions);
+  }
+
+  public logout(){
+    localStorage.removeItem('token');
+    localStorage.removeItem('profile');
   }
 
   // ------------------ using auth0 ------------------

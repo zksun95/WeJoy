@@ -14,7 +14,7 @@
           <a class="nav-link" [routerLink]="['/events']" >Events</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/new-event']">Create</a>
+          <a class="nav-link" [routerLink]="['/new-event']" *ngIf="auth.isAuthenticated()">Create</a>
         </li>
       </ul>
 
