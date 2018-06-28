@@ -10,10 +10,6 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
-// import { FileCreateComponent } from './others/file-create/file-create.component';
-// import { ProfileComponent } from './others/profile/profile.component';
-//import { UserAccessService } from './services/user-access.service';
-
 const routes: Routes = [
     {
         path: "",
