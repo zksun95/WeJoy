@@ -252,18 +252,14 @@ var routes = [
         path: "events/detail/:id",
         component: _components_events_detail_events_detail_component__WEBPACK_IMPORTED_MODULE_2__["EventsDetailComponent"],
     },
-    // {
-    //     path: "files/create",
-    //     component: FileCreateComponent
-    // },
+    {
+        path: "events/:tag",
+        component: _components_events_display_events_display_component__WEBPACK_IMPORTED_MODULE_1__["EventsDisplayComponent"],
+    },
     {
         path: "**",
         redirectTo: "events",
     },
-    {
-        path: "event/:name",
-        component: _components_events_display_events_display_component__WEBPACK_IMPORTED_MODULE_1__["EventsDisplayComponent"],
-    }
 ];
 var routing = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(routes);
 
@@ -461,6 +457,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -476,8 +473,10 @@ var __param = (undefined && undefined.__param) || function (paramIndex, decorato
 
 
 
+
 var EventsDisplayComponent = /** @class */ (function () {
-    function EventsDisplayComponent(getEvents) {
+    function EventsDisplayComponent(route, getEvents) {
+        this.route = route;
         this.getEvents = getEvents;
         this.loadMore = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
         this.loading = true;
@@ -485,19 +484,22 @@ var EventsDisplayComponent = /** @class */ (function () {
     }
     EventsDisplayComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.loadMoreEvents();
-        this.sub = this.loadMore
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["debounceTime"])(500))
-            .subscribe(function (res) {
-            console.log("loading!");
-            //this.events=this.events.concat(this.getEvents.loadMoreEvents_());
-            //this.loading = false;
-            _this.loadMoreEvents();
+        this.route.params.subscribe(function (params) {
+            console.log(params["tag"]);
+            _this.loadMoreEvents(params["tag"]);
+            _this.sub = _this.loadMore
+                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["debounceTime"])(500))
+                .subscribe(function (res) {
+                console.log("loading!");
+                //this.events=this.events.concat(this.getEvents.loadMoreEvents_());
+                //this.loading = false;
+                _this.loadMoreEvents(params["tag"]);
+            });
         });
     };
-    EventsDisplayComponent.prototype.loadMoreEvents = function () {
+    EventsDisplayComponent.prototype.loadMoreEvents = function (tag) {
         var _this = this;
-        this.getEvents.loadMoreEvents()
+        this.getEvents.loadMoreEvents(tag)
             .subscribe(function (events) {
             _this.events = _this.events.concat(events);
             _this.loading = false;
@@ -519,6 +521,9 @@ var EventsDisplayComponent = /** @class */ (function () {
         // console.log(document.documentElement.scrollTop);
         //console.log(document.body.offsetHeight);
     };
+    EventsDisplayComponent.prototype.refresh = function () {
+        window.location.reload();
+    };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"])('window:scroll', ['$event']),
         __metadata("design:type", Function),
@@ -531,8 +536,8 @@ var EventsDisplayComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./events-display.component.html */ "./src/app/components/events-display/events-display.component.html"),
             styles: [__webpack_require__(/*! ./events-display.component.css */ "./src/app/components/events-display/events-display.component.css")]
         }),
-        __param(0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])("get_events")),
-        __metadata("design:paramtypes", [Object])
+        __param(1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"])("get_events")),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], Object])
     ], EventsDisplayComponent);
     return EventsDisplayComponent;
 }());
@@ -816,6 +821,7 @@ var DEFAULT_EVENT = Object.freeze({
     location: "",
     time: "",
     owner: "",
+    tag: "",
     imageUrl: ""
 });
 var NewEventComponent = /** @class */ (function () {
@@ -1286,9 +1292,9 @@ var GetEventsService = /** @class */ (function () {
         console.error('An error occurred', error); // for demo purposes only
         return Promise.reject(error.message || error);
     };
-    GetEventsService.prototype.loadMoreEvents = function () {
+    GetEventsService.prototype.loadMoreEvents = function (tag) {
         //return this.fake_events;
-        return this.http.get("api/v1/events");
+        return this.http.get("api/v1/events/" + tag);
     };
     GetEventsService.prototype.loadEventsHome = function () {
         //return this.fake_events;
@@ -1302,7 +1308,7 @@ var GetEventsService = /** @class */ (function () {
         //   observer.complete();
         // });
         //return res;
-        return this.http.get("api/v1/events/" + id);
+        return this.http.get("api/v1/events/detail/" + id);
     };
     GetEventsService.prototype.addEvent = function (event) {
         var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({ 'content-type': 'application/json' });

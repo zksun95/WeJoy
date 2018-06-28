@@ -89,9 +89,9 @@ export class GetEventsService {
     return Promise.reject(error.message || error);
   }
 
-  loadMoreEvents(): Observable<Event[]>{
+  loadMoreEvents(tag: string): Observable<Event[]>{
      //return this.fake_events;
-    return this.http.get<Event[]>("api/v1/events");
+    return this.http.get<Event[]>(`api/v1/events/${tag}`);
   }
 
   loadEventsHome(): Observable<Event[]>{
@@ -107,7 +107,7 @@ export class GetEventsService {
     //   observer.complete();
     // });
     //return res;
-    return this.http.get<Event>(`api/v1/events/${id}`);
+    return this.http.get<Event>(`api/v1/events/detail/${id}`);
   }
 
   addEvent(event: Event): Promise<Event>{

@@ -3,6 +3,7 @@ import { Event } from '../../type/event';
 import { Subject, Subscription, Observable, Observer } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 import { catchError, map, tap } from 'rxjs/operators';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-events-display',
@@ -20,23 +21,34 @@ export class EventsDisplayComponent implements OnInit {
   events: Event[] = [];
 
   constructor(
+    private route: ActivatedRoute,
     @Inject("get_events") private getEvents
   ) { }
 
+
   ngOnInit() {
-    this.loadMoreEvents();
-    this.sub = this.loadMore
-                  .pipe(debounceTime(500))
-                  .subscribe((res)=>{
-                    console.log("loading!");
-                    //this.events=this.events.concat(this.getEvents.loadMoreEvents_());
-                    //this.loading = false;
-                    this.loadMoreEvents();
-                  });
+
+
+    this.route.params.subscribe(params => {
+      console.log(params["tag"]);
+
+      this.loadMoreEvents(params["tag"]);
+      this.sub = this.loadMore
+        .pipe(debounceTime(500))
+        .subscribe((res) => {
+          console.log("loading!");
+          //this.events=this.events.concat(this.getEvents.loadMoreEvents_());
+          //this.loading = false;
+          this.loadMoreEvents(params["tag"]);
+        });
+    })
+
+
   }
 
-  loadMoreEvents(): void{
-    this.getEvents.loadMoreEvents()
+
+  loadMoreEvents(tag: string): void{
+    this.getEvents.loadMoreEvents(tag)
                   .subscribe(
                     (events)=>{
                       this.events=this.events.concat(events);
@@ -61,6 +73,10 @@ export class EventsDisplayComponent implements OnInit {
     // console.log(window.scrollY);
     // console.log(document.documentElement.scrollTop);
     //console.log(document.body.offsetHeight);
+  }
+
+  refresh(): void {
+    window.location.reload();
   }
 
 }

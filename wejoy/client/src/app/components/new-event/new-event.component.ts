@@ -8,6 +8,7 @@ const DEFAULT_EVENT: Event = Object.freeze({
   location: "",
   time: "",
   owner: "",
+  tag: "",
   imageUrl: ""
 })
 @Component({

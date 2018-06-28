@@ -55,18 +55,15 @@ const routes: Routes = [
         path: "events/detail/:id",
         component: EventsDetailComponent,
     },
-    // {
-    //     path: "files/create",
-    //     component: FileCreateComponent
-    // },
+    {
+        path: "events/:tag",
+        component: EventsDisplayComponent,
+    },
     {
         path: "**",
         redirectTo: "events",
     },
-    {
-    path: "event/:name",
-    component: EventsDisplayComponent,
-    }
+
 ];
 
 export const routing = RouterModule.forRoot(routes);

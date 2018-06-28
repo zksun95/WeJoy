@@ -82,6 +82,18 @@ var getEvents = function() {
     });
 }
 
+var getEventsByCategory = function(tag) {
+    return new Promise((resolve, reject) => {
+        EventModel.find({tag: tag}, function (err, events) {
+            if (err) {
+                reject(err);
+            }else{
+                resolve(events);
+            }
+        });
+    });
+}
+
 var getEvent = function(id) {
     return new Promise((resolve, reject) => {
         EventModel.findOne({id: id}, function (err, event) {
@@ -113,6 +125,7 @@ var addEvent = function (newEvent) {
 module.exports = {
     getEvents: getEvents,
     getEvent: getEvent,
-    addEvent: addEvent
+    addEvent: addEvent,
+    getEventsByCategory: getEventsByCategory
 }
 
