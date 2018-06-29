@@ -27,4 +27,5 @@ yarn-error.log*
 .vscode
 .idea
 /config
-config/
+config.json
+
