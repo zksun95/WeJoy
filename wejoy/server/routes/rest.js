@@ -23,12 +23,21 @@ router.get("/events/:tag", function (req, res) {
 });
 
 router.post("/events", jsonParser, function (req, res) {
-    eventService.addEvent(req.body)
+
+    sqlService.addSqlEvent(req.body)
         .then(function (event) {
             res.json(event);
         }, function (error) {
-            res.status(400).send("Event name already exists");
+            res.status(400).send("Event name already exits");
         });
+
+//add events to mongoDB
+    // eventService.addEvent(req.body)
+    //     .then(function (event) {
+    //         res.json(event);
+    //     }, function (error) {
+    //         res.status(400).send("Event name already exists");
+    //     });
 });
 
 module.exports = router;

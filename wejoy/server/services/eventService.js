@@ -122,6 +122,8 @@ var addEvent = function (newEvent) {
         });
     })
 }
+
+
 module.exports = {
     getEvents: getEvents,
     getEvent: getEvent,

@@ -5,7 +5,7 @@ var bodyParser = require("body-parser");
 var jsonParser = bodyParser.json();
 var sqlService = require("../services/sqlService");
 
-router.get("/eventstest", function (req, res){
+router.get("/events", function (req, res){
     sqlService.getSqlEvent()
         .then(events => res.json(events));
 });
