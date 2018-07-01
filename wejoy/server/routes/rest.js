@@ -25,4 +25,13 @@ router.post("/events", jsonParser, function (req, res) {
         });
 });
 
+router.post("/events/register", jsonParser, function (req, res) {
+    eventService.registerEvent(req.body)
+        .then(function (order) {
+            res.json(order);
+        }, function (error) {
+            res.status(400).send("Event name already exists");
+        });
+});
+
 module.exports = router;

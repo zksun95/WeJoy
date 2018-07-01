@@ -1,0 +1,94 @@
+<!-- <div class="container" *ngIf="event"> -->
+<div class="mx-auto" *ngIf="event">
+  <div class="evetn-card mx-auto">
+
+    <!-- pic and info on the side of pic, info will disable when screen too small -->
+    <div class="row border-right border-top p-0 mx-2 mb-0 mt-lg-5 mt-md-2">
+      <div class="col-md-8 col-sm-12 event-detail-img p-0 m-0">
+        <img class="card-img-left img-fluid" src="{{event.imageUrl}}" >
+      </div>
+      <div class="col-md-4 col-sm-12 event-detail-info d-none d-md-block">
+        <blockquote class="ml-3 mt-4 blockquote text-left">
+          <p class="mb-lg-4 mb-md-3 flex-font-size text-secondary"><b>Free</b></p>
+          <p class="mb-1 flex-font-size font-weight-bold">{{event.name}}</p>
+          <footer class="small blockquote-footer">by {{event.owner}}</footer>
+        </blockquote>
+        <blockquote class="event-detail-timeloc mx-3 blockquote text-left">
+          <p class="mb-lg-1 mb-md-2 small flex-font-size text-secondary">{{event.time}}</p>
+          <p class="mb-lg-3 mb-md-0 d-none d-lg-block small flex-font-size text-secondary">{{event.location}}</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- info appear when screen smaller than md -->
+    <div class="row p-0 mx-2 border-left border-right d-block d-md-none">
+      <p class="m-0 px-3 pt-3 font-weight-bold">{{event.name}}</p>
+    </div>
+    <div class="row p-0 mx-2 border-left border-right d-block d-md-none">
+      <p class="m-0 px-3 pt-3">{{event.location}}</p>
+    </div>
+    <div class="row p-0 mx-2 border-left border-right d-block d-md-none">
+      <p class="m-0 px-3 pb-3">{{event.time}}</p>
+    </div>
+
+    <!-- button and other info -->
+    <div class="row border border-bottom-0 p-0 mx-2">
+      <div class="col-md-8 col-sm-6 mx-auto my-auto">
+        <p class="text-secondary ml-3 p-0 my-0 align-middle d-block d-md-none"><b>Free</b></p>
+      </div>
+      <div class="col-md-4 col-sm-6 mx-auto text-center">
+        <!-- <button type="button" class="btn btn-success my-3 col-11">I'M IN</button> -->
+        <div class="btn-group col-12 my-3" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary btn-outline-success col-lg-10 col-md-9 col-sm-10" [routerLink] = "['/events', event.id, 'register']">I'M IN</button>
+          <button type="button" class="btn btn-secondary btn-outline-success col-lg-2 col-md-3 col-sm-2">❤️</button>
+          <!-- <button type="button" class="btn btn-secondary btn-outline-success col-2">💔</button> -->
+        </div>
+      </div>
+    </div>
+    <!-- detail information -->
+    <!--<div class="row border p-0 mx-2 my-0">-->
+      <!--<div class="col-lg-8 col-md-12 event-detail-img p-0 my-0">-->
+        <!--<blockquote class="mx-4 mt-lg-5 mt-md-3 blockquote text-left">-->
+          <!--<pre class="mb-lg-5 mb-md-3 flex-font-size mx-5 pr-2">{{event.description}}</pre>-->
+          <!--&lt;!&ndash; <footer class="blockquote-footer">Find and join any events you like.</footer> &ndash;&gt;-->
+        <!--</blockquote>-->
+      <!--</div>-->
+      <!--<div class="col-lg-4 col-md-12 event-detail-info">-->
+        <!--<blockquote class="ml-3 mt-lg-5 mt-md-3 blockquote text-left">-->
+          <!--<p class="mb-lg-5 mb-md-3 flex-font-size">other info ...</p>-->
+          <!--&lt;!&ndash; <footer class="blockquote-footer">Find and join any events you like.</footer> &ndash;&gt;-->
+        <!--</blockquote>-->
+      <!--</div>-->
+    <!--</div>-->
+
+  </div>
+
+  <!--register event-->
+  <div>
+    <form #formRef="ngForm">
+      <div class="form-group">
+        <label for="userName">name</label>
+        <input tpye="text" class="form-control" id="userName"
+               name="userName" required placeholder="姓名" [(ngModel)]="newOrder.name">
+      </div>
+      <div class="form-group">
+        <label for="userEmail">email</label>
+        <input tpye="text" class="form-control" id="userEmail"
+               name="userEmail" required placeholder="邮箱" [(ngModel)]="newOrder.email">
+      </div>
+
+      <div class="form-group">
+        <label for="userPhone">Phone</label>
+        <input tpye="text" class="form-control" id="userPhone"
+               name="userPhone" required placeholder="电话" [(ngModel)]="newOrder.phone">
+      </div>
+
+      <div class="row">
+        <div class="col-md-12"></div>
+        <button type="submit" class="btn btn-primary pull-right" (click)="registerEvent()"> 注册活动</button>
+      </div>
+
+    </form>
+  </div>
+
+</div>

@@ -69,6 +69,7 @@ var events = [
 ];
 
 var EventModel = require("../models/eventModel");
+var OrderModel =require("../models/orderModel");
 
 var getEvents = function() {
     return new Promise((resolve, reject) => {
@@ -98,7 +99,7 @@ var addEvent = function (newEvent) {
     return new Promise((resolve, reject) => {
         EventModel.findOne({name: newEvent.name}, function (err, event) {
             if(event){
-                reject("Problem name already exists");
+                reject("Event name already exists");
             }else{
                 EventModel.count({}, function (err, num) {
                     newEvent.id = num + 1;
@@ -110,9 +111,29 @@ var addEvent = function (newEvent) {
         });
     })
 }
+
+var registerEvent = function (newOrder) {
+    return new Promise((resolve, reject) => {
+        OrderModel.findOne({email: newOrder.email}, function (err, order) {
+            if(order){
+                reject("email already exists");
+            }else{
+                OrderModel.count({}, function (err, num) {
+                    newOrder.id = num + 1;
+                    var mongoOrder = new OrderModel(newOrder);
+                    mongoOrder.save();
+                    resolve(newOrder);
+                });
+            }
+        });
+    })
+}
+
+
 module.exports = {
     getEvents: getEvents,
     getEvent: getEvent,
-    addEvent: addEvent
+    addEvent: addEvent,
+    registerEvent: registerEvent
 }
 

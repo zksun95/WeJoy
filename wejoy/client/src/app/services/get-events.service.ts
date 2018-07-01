@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Event } from '../type/event';
+import { Order } from '../type/order';
 import { ObserveOnOperator } from 'rxjs/internal/operators/observeOn';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { HttpHeaders } from "@angular/common/http";
@@ -113,6 +114,16 @@ export class GetEventsService {
   addEvent(event: Event): Promise<Event>{
     var headers = new HttpHeaders({'content-type' :'application/json' })
     return this.http.post('/api/v1/events',event)
+      .toPromise()
+      .then((res: Response) => {
+        return res;
+      })
+      .catch(this.handleError);
+  }
+
+  registerEvent(order: Order): Promise<Event>{
+    var headers = new HttpHeaders({'content-type' :'application/json' })
+    return this.http.post('/api/v1/events/register',order)
       .toPromise()
       .then((res: Response) => {
         return res;

@@ -1,0 +1,4 @@
+{
+    "mongoDbUri": "mongodb://root:root123@ds117061.mlab.com:17061/wejoy_db",
+    "jwtSecret": "a secret"
+}
