@@ -10,7 +10,7 @@ const DEFAULT_EVENT: Event = Object.freeze({
   time: "",
   owner: "",
   imageUrl: ""
-})
+});
 @Component({
   selector: 'app-new-event',
   templateUrl: './new-event.component.html',

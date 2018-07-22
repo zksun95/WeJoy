@@ -14,7 +14,7 @@
           <a class="nav-link" [routerLink]="['/events']" >Events</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/new-event']" *ngIf="auth.isAuthenticated()">Create</a>
+          <a class="nav-link" [routerLink]="['/new-event']" *ngIf="isAuthenticated()">Create</a>
         </li>
       </ul>
 
@@ -23,11 +23,11 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </div>
 
-      <div class="form-inline my-2 mr-2 my-lg-0" *ngIf="!auth.isAuthenticated()">
+      <div class="form-inline my-2 mr-2 my-lg-0" *ngIf="!isAuthenticated()">
         <button class="btn btn-success my-2 my-sm-0" [routerLink]="['/signin']">Sign In</button>
       </div>
 
-      <ul class="navbar-nav navbar-right" *ngIf="auth.isAuthenticated()">
+      <ul class="navbar-nav navbar-right" *ngIf="isAuthenticated()">
         <li class="nav-item dropdown" >
             <a class="nav-link dropdown-toggle" href="just to make the mouse to become a hand" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{username}}

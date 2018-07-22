@@ -15,11 +15,13 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 
 
 import { GetEventsService } from './services/get-events.service';
+import { GetOrdersService } from './services/get-orders.service';
 import { AuthService } from './services/auth.service';
+
 import { UserHistoryComponent } from './components/user-history/user-history.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { NewEventComponent } from './components/new-event/new-event.component';
-import {importType} from "@angular/compiler/src/output/output_ast";
+import { importType } from "@angular/compiler/src/output/output_ast";
 
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
@@ -49,7 +51,12 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     {
       provide: "get_events",
       useClass: GetEventsService
-    }, {
+    }, 
+    {
+      provide: "get_orders",
+      useClass: GetOrdersService
+    },
+    {
       provide: "auth",
       useClass: AuthService
     } ],
